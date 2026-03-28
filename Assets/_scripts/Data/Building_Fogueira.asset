@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5fa9a4917749d46afdd4819f1269fd, type: 3}
+  m_Name: Building_Fogueira
+  m_EditorClassIdentifier: Assembly-CSharp::BuildingData
+  buildingName: Fogueira
+  spriteBuilt: {fileID: -3968539654459880187, guid: 26454de1e7717f34fa557fd8ef70eaf8, type: 3}
+  spriteBuilding: {fileID: -2008683585229313245, guid: 26454de1e7717f34fa557fd8ef70eaf8, type: 3}
+  spriteSlot: {fileID: 6232825715084013417, guid: 4d837276e2040454aacf8bf3041eac68, type: 3}
+  coinCost: 1
+  needsBuilder: 0
+  buildTime: 10
+  nextLevel: {fileID: 11400000, guid: a7238465c722c3948bed73919bb32292, type: 2}
+  childSlots: []

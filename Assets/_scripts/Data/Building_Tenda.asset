@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5fa9a4917749d46afdd4819f1269fd, type: 3}
+  m_Name: Building_Tenda
+  m_EditorClassIdentifier: Assembly-CSharp::BuildingData
+  buildingName: Tenda
+  spriteBuilt: {fileID: -6694875992507473619, guid: bc73a2249d705ad419af8fd7af9ef99e, type: 3}
+  spriteBuilding: {fileID: -6694875992507473619, guid: bc73a2249d705ad419af8fd7af9ef99e, type: 3}
+  spriteSlot: {fileID: 6232825715084013417, guid: 4d837276e2040454aacf8bf3041eac68, type: 3}
+  coinCost: 10
+  needsBuilder: 0
+  buildTime: 5
+  nextLevel: {fileID: 0}
+  childSlots:
+  - localOffset: {x: -3, y: 0}
+    defaultData: {fileID: 0}
+  - localOffset: {x: 3, y: 0}
+    defaultData: {fileID: 0}

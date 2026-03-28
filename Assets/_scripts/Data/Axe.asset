@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396eb0b5a16012c49a22f2a88e5d9802, type: 3}
+  m_Name: Axe
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  itemName: Axe
+  itemType: 4
+  description: Axe
+  toolType: 1
+  sprite: {fileID: 3586555820819971319, guid: 4e7d11d533a4a6342932e4c9a6be3e4e, type: 3}
+  tintColor: {r: 1, g: 1, b: 1, a: 1}
+  autoCollect: 0
+  collectRadius: 0.5
+  collectSound: {fileID: 0}
+  value: 1
+  weight: 0
+  isStackable: 0
+  maxStack: 1
