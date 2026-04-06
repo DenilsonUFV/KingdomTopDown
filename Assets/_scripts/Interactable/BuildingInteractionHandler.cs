@@ -11,10 +11,13 @@ public class BuildingInteractionHandler : MonoBehaviour
     [SerializeField] private int playerIndex = 0;
 
     [Header("Moedas")]
-    [SerializeField] private float coinInterval = 1f;   // 1 moeda por segundo
+    [SerializeField] private float coinInterval = 1f;
+    [SerializeField] private Sprite coinSprite;           // ← arraste o sprite da moeda
+    [SerializeField] private float coinFlySpeed = 4f;
+    [SerializeField] private float coinArcHeight = 0.8f;
 
     [Header("Reembolso")]
-    [SerializeField] private float refundDelay = 3f;   // segundos para reembolsar
+    [SerializeField] private float refundDelay = 3f;
 
     #endregion
 
@@ -83,7 +86,6 @@ public class BuildingInteractionHandler : MonoBehaviour
         InputActionMap map = inputActionAsset.FindActionMap(mapName, throwIfNotFound: false);
         if (map == null) return;
 
-        // Usa a mesma action de Interact — mas lê o canceled também
         _interactAction = map.FindAction("Interact", throwIfNotFound: false);
     }
 
@@ -94,19 +96,23 @@ public class BuildingInteractionHandler : MonoBehaviour
 
     private void OnHoldStarted(InputAction.CallbackContext ctx)
     {
-        // Verifica se tem Building no raio
         _targetBuilding = FindNearestBuilding();
+
         if (_targetBuilding == null) return;
         if (!_targetBuilding.CanReceiveCoins()) return;
 
         _isHolding = true;
-        _coinTimer = coinInterval; // solta a primeira moeda imediatamente
+        _coinTimer = coinInterval;  // primeira moeda imediata
     }
 
     private void OnHoldCanceled(InputAction.CallbackContext ctx)
     {
-        if (_targetBuilding != null)
+        // Inicia reembolso se parou antes de completar
+        if (_targetBuilding != null && _targetBuilding.CoinsInvested > 0)
+        {
+            Debug.Log($"[BuildingInteraction] Parou de investir — reembolso em {refundDelay}s");
             _targetBuilding.StartRefundTimer(refundDelay);
+        }
 
         StopHolding();
     }
@@ -126,11 +132,27 @@ public class BuildingInteractionHandler : MonoBehaviour
             return;
         }
 
-        // Voa a moeda visualmente
+        // Verifica saldo antes de voar
+        if (!ResourceManager.Has(ResourceType.Coin, 1))
+        {
+            Debug.Log("[BuildingInteraction] Sem moedas!");
+            StopHolding();
+            return;
+        }
+
+        Vector3 from = transform.position;
+        Vector3 to = _targetBuilding.transform.position;
+
+        Building buildingRef = _targetBuilding;
+
+        // Voa a moeda com sprite correto
         CoinFlyEffect.Spawn(
-            transform.position,
-            _targetBuilding.transform.position,
-            onArrive: () => _targetBuilding.ReceiveCoin()
+            from,
+            to,
+            coinSprite,
+            onArrive: () => buildingRef.ReceiveCoin(),
+            flySpeed: coinFlySpeed,
+            arcHeight: coinArcHeight
         );
     }
 
@@ -142,8 +164,11 @@ public class BuildingInteractionHandler : MonoBehaviour
     private Building FindNearestBuilding()
     {
         Collider2D[] buffer = new Collider2D[8];
+
         int count = Physics2D.OverlapCircleNonAlloc(
-            transform.position, 1.5f, buffer,
+            transform.position,
+            1.5f,
+            buffer,
             LayerMask.GetMask("Interactable")
         );
 
@@ -153,6 +178,7 @@ public class BuildingInteractionHandler : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             if (buffer[i] == null) continue;
+
             Building b = buffer[i].GetComponent<Building>();
             if (b == null || !b.CanReceiveCoins()) continue;
 
@@ -161,6 +187,17 @@ public class BuildingInteractionHandler : MonoBehaviour
         }
 
         return best;
+    }
+
+    #endregion
+
+    // ─────────────────────────────────────────
+    #region Gizmos
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, 1.5f);
     }
 
     #endregion

@@ -1,0 +1,4834 @@
+fileFormatVersion: 2
+guid: 2dc7d8f8648397b41a0ecbf84aeb9b37
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1812931693711799070
+    second: BOT_Construtor_0
+  - first:
+      213: -2823908422505155412
+    second: BOT_Construtor_1
+  - first:
+      213: -8354330917002200380
+    second: BOT_Construtor_2
+  - first:
+      213: 1348218929837640950
+    second: BOT_Construtor_3
+  - first:
+      213: 5117749724186243883
+    second: BOT_Construtor_4
+  - first:
+      213: -4193698742964466503
+    second: BOT_Construtor_5
+  - first:
+      213: 7556776672159450710
+    second: BOT_Construtor_6
+  - first:
+      213: -326262768899993656
+    second: BOT_Construtor_7
+  - first:
+      213: 4288052713991740992
+    second: BOT_Construtor_8
+  - first:
+      213: -1989665641977247230
+    second: BOT_Construtor_9
+  - first:
+      213: 2506704515184102092
+    second: BOT_Construtor_10
+  - first:
+      213: 7861057047567725044
+    second: BOT_Construtor_11
+  - first:
+      213: -9087844006642003872
+    second: BOT_Construtor_12
+  - first:
+      213: 46354852830334596
+    second: BOT_Construtor_13
+  - first:
+      213: 503380275112052874
+    second: BOT_Construtor_14
+  - first:
+      213: 3240800990940228593
+    second: BOT_Construtor_15
+  - first:
+      213: 4597412050835244419
+    second: BOT_Construtor_16
+  - first:
+      213: -3517091553226802416
+    second: BOT_Construtor_17
+  - first:
+      213: -1859534065139054074
+    second: BOT_Construtor_18
+  - first:
+      213: 8023056324020889426
+    second: BOT_Construtor_19
+  - first:
+      213: -9144500915505362350
+    second: BOT_Construtor_20
+  - first:
+      213: 285547305140389595
+    second: BOT_Construtor_21
+  - first:
+      213: 5295966165491433395
+    second: BOT_Construtor_22
+  - first:
+      213: 5545098782707327594
+    second: BOT_Construtor_23
+  - first:
+      213: 4050162370687350560
+    second: BOT_Construtor_24
+  - first:
+      213: 4004193942310635385
+    second: BOT_Construtor_25
+  - first:
+      213: 6020773871127572392
+    second: BOT_Construtor_26
+  - first:
+      213: -6552011841857181153
+    second: BOT_Construtor_27
+  - first:
+      213: -9175418400034817522
+    second: BOT_Construtor_28
+  - first:
+      213: -1014610808402910293
+    second: BOT_Construtor_29
+  - first:
+      213: -2794019301720127805
+    second: BOT_Construtor_30
+  - first:
+      213: 7907614650028935088
+    second: BOT_Construtor_31
+  - first:
+      213: -7552863452354310632
+    second: BOT_Construtor_32
+  - first:
+      213: 8885716864142674162
+    second: BOT_Construtor_33
+  - first:
+      213: -4029366603893240091
+    second: BOT_Construtor_34
+  - first:
+      213: -6795674930692795879
+    second: BOT_Construtor_35
+  - first:
+      213: -4277865417300357177
+    second: BOT_Construtor_36
+  - first:
+      213: 9140053843535301761
+    second: BOT_Construtor_37
+  - first:
+      213: -5590536012085381686
+    second: BOT_Construtor_38
+  - first:
+      213: 7167146297968293798
+    second: BOT_Construtor_39
+  - first:
+      213: 707279020478334715
+    second: BOT_Construtor_40
+  - first:
+      213: -7850740707685680231
+    second: BOT_Construtor_41
+  - first:
+      213: 3047973265105957189
+    second: BOT_Construtor_42
+  - first:
+      213: 136916216444521375
+    second: BOT_Construtor_43
+  - first:
+      213: -2364023857274633323
+    second: BOT_Construtor_44
+  - first:
+      213: 2919713520407119425
+    second: BOT_Construtor_45
+  - first:
+      213: 3313334463950317112
+    second: BOT_Construtor_46
+  - first:
+      213: -6621957827866597619
+    second: BOT_Construtor_47
+  - first:
+      213: -627414906829557873
+    second: BOT_Construtor_48
+  - first:
+      213: -3703763949926064443
+    second: BOT_Construtor_49
+  - first:
+      213: -5057297676424859540
+    second: BOT_Construtor_50
+  - first:
+      213: -5684742510353013713
+    second: BOT_Construtor_51
+  - first:
+      213: 7943728738159384542
+    second: BOT_Construtor_52
+  - first:
+      213: -8404666497232813937
+    second: BOT_Construtor_53
+  - first:
+      213: -1279380780366683639
+    second: BOT_Construtor_54
+  - first:
+      213: 5958297433190287906
+    second: BOT_Construtor_55
+  - first:
+      213: -406959678135005549
+    second: BOT_Construtor_56
+  - first:
+      213: -7387543786909792964
+    second: BOT_Construtor_57
+  - first:
+      213: -8864431241096794289
+    second: BOT_Construtor_58
+  - first:
+      213: 34982889842658076
+    second: BOT_Construtor_59
+  - first:
+      213: -1913042555598003237
+    second: BOT_Construtor_60
+  - first:
+      213: -355808688240671502
+    second: BOT_Construtor_61
+  - first:
+      213: -3491270389661143753
+    second: BOT_Construtor_62
+  - first:
+      213: -4856334105891989007
+    second: BOT_Construtor_63
+  - first:
+      213: -6728109000772117491
+    second: BOT_Construtor_64
+  - first:
+      213: 5965218561650311649
+    second: BOT_Construtor_65
+  - first:
+      213: 3513051351743605823
+    second: BOT_Construtor_66
+  - first:
+      213: -8365038789380241676
+    second: BOT_Construtor_67
+  - first:
+      213: 2435684259091255948
+    second: BOT_Construtor_68
+  - first:
+      213: 3973293279390542034
+    second: BOT_Construtor_69
+  - first:
+      213: 6829021174129544162
+    second: BOT_Construtor_70
+  - first:
+      213: -3984441654530952076
+    second: BOT_Construtor_71
+  - first:
+      213: -1388930974647950485
+    second: BOT_Construtor_72
+  - first:
+      213: -6252016406030681868
+    second: BOT_Construtor_73
+  - first:
+      213: -1623548138560784778
+    second: BOT_Construtor_74
+  - first:
+      213: -2204958398854006159
+    second: BOT_Construtor_75
+  - first:
+      213: -293128157844733609
+    second: BOT_Construtor_76
+  - first:
+      213: 5079472838241817663
+    second: BOT_Construtor_77
+  - first:
+      213: 224789055756889629
+    second: BOT_Construtor_78
+  - first:
+      213: -702863867581810814
+    second: BOT_Construtor_79
+  - first:
+      213: -6812689105131401470
+    second: BOT_Construtor_80
+  - first:
+      213: -3666587452306012821
+    second: BOT_Construtor_81
+  - first:
+      213: 6168583830193406352
+    second: BOT_Construtor_82
+  - first:
+      213: 7144495262167675732
+    second: BOT_Construtor_83
+  - first:
+      213: 8390250184081554462
+    second: BOT_Construtor_84
+  - first:
+      213: 5146998351373675984
+    second: BOT_Construtor_85
+  - first:
+      213: -2273637853510428672
+    second: BOT_Construtor_86
+  - first:
+      213: -2529169811273616282
+    second: BOT_Construtor_87
+  - first:
+      213: -4919513410750101777
+    second: BOT_Construtor_88
+  - first:
+      213: -2972397297203255439
+    second: BOT_Construtor_89
+  - first:
+      213: -6183130343288736897
+    second: BOT_Construtor_90
+  - first:
+      213: 5052124031293733884
+    second: BOT_Construtor_91
+  - first:
+      213: 6820562336600834014
+    second: BOT_Construtor_92
+  - first:
+      213: -8841308881833394079
+    second: BOT_Construtor_93
+  - first:
+      213: -348487460790746432
+    second: BOT_Construtor_94
+  - first:
+      213: 2733309018240789927
+    second: BOT_Construtor_95
+  - first:
+      213: -3435933262010806490
+    second: BOT_Construtor_96
+  - first:
+      213: 6618275835773418860
+    second: BOT_Construtor_97
+  - first:
+      213: -392209048409730292
+    second: BOT_Construtor_98
+  - first:
+      213: 2473975859963106865
+    second: BOT_Construtor_99
+  - first:
+      213: -1751734788902281949
+    second: BOT_Construtor_100
+  - first:
+      213: 4325601003821781181
+    second: BOT_Construtor_101
+  - first:
+      213: 6976431104250092362
+    second: BOT_Construtor_102
+  - first:
+      213: -165713567645953957
+    second: BOT_Construtor_103
+  - first:
+      213: 5194241849800084754
+    second: BOT_Construtor_104
+  - first:
+      213: -8862116948855053042
+    second: BOT_Construtor_105
+  - first:
+      213: 8082622275878421857
+    second: BOT_Construtor_106
+  - first:
+      213: -798294982304188908
+    second: BOT_Construtor_107
+  - first:
+      213: 8656448547189007504
+    second: BOT_Construtor_108
+  - first:
+      213: -1958321062254779535
+    second: BOT_Construtor_109
+  - first:
+      213: 2934176345888659894
+    second: BOT_Construtor_110
+  - first:
+      213: -5063644823036702234
+    second: BOT_Construtor_111
+  - first:
+      213: 1352872824911448077
+    second: BOT_Construtor_112
+  - first:
+      213: 9207688228442579503
+    second: BOT_Construtor_113
+  - first:
+      213: 4829517503849691105
+    second: BOT_Construtor_114
+  - first:
+      213: -4775365112534293746
+    second: BOT_Construtor_115
+  - first:
+      213: -3155247867097344291
+    second: BOT_Construtor_116
+  - first:
+      213: 3888258651884082768
+    second: BOT_Construtor_117
+  - first:
+      213: 6969882655876595811
+    second: BOT_Construtor_118
+  - first:
+      213: -4704571668972613328
+    second: BOT_Construtor_119
+  - first:
+      213: -2724887906866526264
+    second: BOT_Construtor_120
+  - first:
+      213: 323811920675633965
+    second: BOT_Construtor_121
+  - first:
+      213: -1891413780690271297
+    second: BOT_Construtor_122
+  - first:
+      213: -6189311297016467854
+    second: BOT_Construtor_123
+  - first:
+      213: -8043184326837580559
+    second: BOT_Construtor_124
+  - first:
+      213: -7924421504085347720
+    second: BOT_Construtor_125
+  - first:
+      213: -181586748418017795
+    second: BOT_Construtor_126
+  - first:
+      213: 5410786762213027538
+    second: BOT_Construtor_127
+  - first:
+      213: 2834000004325665140
+    second: BOT_Construtor_128
+  - first:
+      213: 5469318080994820524
+    second: BOT_Construtor_129
+  - first:
+      213: 555329249958339321
+    second: BOT_Construtor_130
+  - first:
+      213: -2158535976174010717
+    second: BOT_Construtor_131
+  - first:
+      213: 1989875011819473630
+    second: BOT_Construtor_132
+  - first:
+      213: 131752725785798752
+    second: BOT_Construtor_133
+  - first:
+      213: -5108023384525139951
+    second: BOT_Construtor_134
+  - first:
+      213: -8200246014538593839
+    second: BOT_Construtor_135
+  - first:
+      213: -7302633302551280020
+    second: BOT_Construtor_136
+  - first:
+      213: 3152967519961463251
+    second: BOT_Construtor_137
+  - first:
+      213: -4493662115149728339
+    second: BOT_Construtor_138
+  - first:
+      213: 6049909230165486057
+    second: BOT_Construtor_139
+  - first:
+      213: -6044264615391464399
+    second: BOT_Construtor_140
+  - first:
+      213: 7557131082628505949
+    second: BOT_Construtor_141
+  - first:
+      213: -8733178316255528650
+    second: BOT_Construtor_142
+  - first:
+      213: 8657045651043179990
+    second: BOT_Construtor_143
+  - first:
+      213: -3185595658171946795
+    second: BOT_Construtor_144
+  - first:
+      213: 8584996333521156974
+    second: BOT_Construtor_145
+  - first:
+      213: 7027762307106715378
+    second: BOT_Construtor_146
+  - first:
+      213: 3211379623033604750
+    second: BOT_Construtor_147
+  - first:
+      213: -5962767281770369332
+    second: BOT_Construtor_148
+  - first:
+      213: 5318203247587821877
+    second: BOT_Construtor_149
+  - first:
+      213: 626208688719405285
+    second: BOT_Construtor_150
+  - first:
+      213: -319509854346460437
+    second: BOT_Construtor_151
+  - first:
+      213: 8453742034991165472
+    second: BOT_Construtor_152
+  - first:
+      213: 5648726024405312311
+    second: BOT_Construtor_153
+  - first:
+      213: 1629800994111234003
+    second: BOT_Construtor_154
+  - first:
+      213: -1940496131304440542
+    second: BOT_Construtor_155
+  - first:
+      213: -2121160364307859107
+    second: BOT_Construtor_156
+  - first:
+      213: 2878482731480152664
+    second: BOT_Construtor_157
+  - first:
+      213: 3122364293650449764
+    second: BOT_Construtor_158
+  - first:
+      213: -4213423381105913874
+    second: BOT_Construtor_159
+  - first:
+      213: 6122634164080324579
+    second: BOT_Construtor_160
+  - first:
+      213: -2643284614682267832
+    second: BOT_Construtor_161
+  - first:
+      213: 8130721430488767178
+    second: BOT_Construtor_162
+  - first:
+      213: 3976481108650697109
+    second: BOT_Construtor_163
+  - first:
+      213: -4065945300057953958
+    second: BOT_Construtor_164
+  - first:
+      213: 1835538585851105051
+    second: BOT_Construtor_165
+  - first:
+      213: -2497937429347554744
+    second: BOT_Construtor_166
+  - first:
+      213: 8514331782135964820
+    second: BOT_Construtor_167
+  - first:
+      213: 7106062288473591229
+    second: BOT_Construtor_168
+  - first:
+      213: 7312495064334446508
+    second: BOT_Construtor_169
+  - first:
+      213: 7417094775645665567
+    second: BOT_Construtor_170
+  - first:
+      213: -3834901369850285367
+    second: BOT_Construtor_171
+  - first:
+      213: 4212415056807155226
+    second: BOT_Construtor_172
+  - first:
+      213: -2458991665597708378
+    second: BOT_Construtor_173
+  - first:
+      213: -4522533847398957711
+    second: BOT_Construtor_174
+  - first:
+      213: -5437120454022170563
+    second: BOT_Construtor_175
+  - first:
+      213: 6754499047920884386
+    second: BOT_Construtor_176
+  - first:
+      213: 118728772710620210
+    second: BOT_Construtor_177
+  - first:
+      213: 2678684800056956932
+    second: BOT_Construtor_178
+  - first:
+      213: 5977984814843607119
+    second: BOT_Construtor_179
+  - first:
+      213: 8812817736846503631
+    second: BOT_Construtor_180
+  - first:
+      213: -5092676823417950510
+    second: BOT_Construtor_181
+  - first:
+      213: -4286833741516161628
+    second: BOT_Construtor_182
+  - first:
+      213: 2741396566624260030
+    second: BOT_Construtor_183
+  - first:
+      213: -7957580609067502244
+    second: BOT_Construtor_184
+  - first:
+      213: 7806438590026427234
+    second: BOT_Construtor_185
+  - first:
+      213: 2545135596174121021
+    second: BOT_Construtor_186
+  - first:
+      213: -5459001237880533038
+    second: BOT_Construtor_187
+  - first:
+      213: -6053619453588724518
+    second: BOT_Construtor_188
+  - first:
+      213: -6468358281348083674
+    second: BOT_Construtor_189
+  - first:
+      213: -4519006469085363203
+    second: BOT_Construtor_190
+  - first:
+      213: 7371694683458290970
+    second: BOT_Construtor_191
+  - first:
+      213: 4792323026507466147
+    second: BOT_Construtor_192
+  - first:
+      213: -7119537129111475841
+    second: BOT_Construtor_193
+  - first:
+      213: 894758573722944480
+    second: BOT_Construtor_194
+  - first:
+      213: 5743197052822873914
+    second: BOT_Construtor_195
+  - first:
+      213: -1891018697097090428
+    second: BOT_Construtor_196
+  - first:
+      213: 2459967848647913064
+    second: BOT_Construtor_197
+  - first:
+      213: 942981802720109610
+    second: BOT_Construtor_198
+  - first:
+      213: 9093143023203547821
+    second: BOT_Construtor_199
+  - first:
+      213: 4631935239091777743
+    second: BOT_Construtor_200
+  - first:
+      213: 4138025869832427355
+    second: BOT_Construtor_201
+  - first:
+      213: 5565747062273408245
+    second: BOT_Construtor_202
+  - first:
+      213: 2298454800723301849
+    second: BOT_Construtor_203
+  - first:
+      213: 3036253707853911349
+    second: BOT_Construtor_204
+  - first:
+      213: 3556030190302232000
+    second: BOT_Construtor_205
+  - first:
+      213: -7038761575298188108
+    second: BOT_Construtor_206
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BOT_Construtor_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ecc24ada3c27d6e0800000000000000
+      internalID: -1812931693711799070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1792
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4b85e50467fc8d0800000000000000
+      internalID: -2823908422505155412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1792
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca350c4b447f0c80800000000000000
+      internalID: -8354330917002200380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1792
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fc0e6839f5d5b210800000000000000
+      internalID: 1348218929837640950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1792
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2379775246e50740800000000000000
+      internalID: 5117749724186243883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1792
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bcc992663dfcc5c0800000000000000
+      internalID: -4193698742964466503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1728
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 656c50788501fd860800000000000000
+      internalID: 7556776672159450710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1728
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cfc7448db1e87bf0800000000000000
+      internalID: -326262768899993656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1728
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04e90ab6939328b30800000000000000
+      internalID: 4288052713991740992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1728
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20a852ce3a94364e0800000000000000
+      internalID: -1989665641977247230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1728
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca8a68b97a99c220800000000000000
+      internalID: 2506704515184102092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_11
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1728
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f1fa5f2cb5181d60800000000000000
+      internalID: 7861057047567725044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1664
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 060d0f1860e71e180800000000000000
+      internalID: -9087844006642003872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1664
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e41983e7fa4a000800000000000000
+      internalID: 46354852830334596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1664
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a880ef471bd5cf600800000000000000
+      internalID: 503380275112052874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1664
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fbe9bca453a9fc20800000000000000
+      internalID: 3240800990940228593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1664
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3858220f6e94dcf30800000000000000
+      internalID: 4597412050835244419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1664
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01bb36fddd7c03fc0800000000000000
+      internalID: -3517091553226802416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60a06a7be9b9136e0800000000000000
+      internalID: -1859534065139054074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1600
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257673ef73f975f60800000000000000
+      internalID: 8023056324020889426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1600
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a8113fdd4381180800000000000000
+      internalID: -9144500915505362350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1600
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd68679d2c776f300800000000000000
+      internalID: 285547305140389595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1600
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bfba941b2d0f7940800000000000000
+      internalID: 5295966165491433395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_23
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1600
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a62a8b3b6f524fc40800000000000000
+      internalID: 5545098782707327594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 027397ba731153830800000000000000
+      internalID: 4050162370687350560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1536
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9774237ec21c19730800000000000000
+      internalID: 4004193942310635385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1536
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8af2385bfe51e8350800000000000000
+      internalID: 6020773871127572392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1536
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1a23f1a1f39215a0800000000000000
+      internalID: -6552011841857181153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1536
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0a7750249d5aa080800000000000000
+      internalID: -9175418400034817522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1536
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba36fdb68d06be1f0800000000000000
+      internalID: -1014610808402910293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c603699f36a939d0800000000000000
+      internalID: -2794019301720127805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_31
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b746abb0ad7dbd60800000000000000
+      internalID: 7907614650028935088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_32
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e0465f4b6de2790800000000000000
+      internalID: -7552863452354310632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f80cedc868605b70800000000000000
+      internalID: 8885716864142674162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_34
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee0f191c60d418c0800000000000000
+      internalID: -4029366603893240091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_35
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9125703d7a9e0b1a0800000000000000
+      internalID: -6795674930692795879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cf42ec6118f1a4c0800000000000000
+      internalID: -4277865417300357177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c8ddb6b8ef7de70800000000000000
+      internalID: 9140053843535301761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_38
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac53f9fed1d6a62b0800000000000000
+      internalID: -5590536012085381686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_39
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a7f7a7b591d67360800000000000000
+      internalID: 7167146297968293798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf682b49582c0d900800000000000000
+      internalID: 707279020478334715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_41
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b32bedbe09c0390800000000000000
+      internalID: -7850740707685680231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_42
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 541378729839c4a20800000000000000
+      internalID: 3047973265105957189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_43
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9b8a2dc29c66e100800000000000000
+      internalID: 136916216444521375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_44
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 593c892b3dc413fd0800000000000000
+      internalID: -2364023857274633323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_45
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14685cd3af7e48820800000000000000
+      internalID: 2919713520407119425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83661d1e3245bfd20800000000000000
+      internalID: 3313334463950317112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_47
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07e460b0741a14a0800000000000000
+      internalID: -6621957827866597619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_48
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8fa3a76779fa47f0800000000000000
+      internalID: -627414906829557873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_49
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ce52c89f46999cc0800000000000000
+      internalID: -3703763949926064443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_50
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60b949de8ed0d9b0800000000000000
+      internalID: -5057297676424859540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_51
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f24a8de4eccbb11b0800000000000000
+      internalID: -5684742510353013713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_52
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed75d0e133bcd3e60800000000000000
+      internalID: 7943728738159384542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_53
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f80cfc0c950ac5b80800000000000000
+      internalID: -8404666497232813937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90228cd65f9be3ee0800000000000000
+      internalID: -1279380780366683639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_55
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22acd6372ff10b250800000000000000
+      internalID: 5958297433190287906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_56
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e0bd234503a5af0800000000000000
+      internalID: -406959678135005549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_57
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c350992111c2a7990800000000000000
+      internalID: -7387543786909792964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_58
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4fec8280c63bf480800000000000000
+      internalID: -8864431241096794289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_59
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1bc942c0c84c7000800000000000000
+      internalID: 34982889842658076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_60
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd320617ee18375e0800000000000000
+      internalID: -1913042555598003237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_61
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4ca6912e9ef0bf0800000000000000
+      internalID: -355808688240671502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73d686104148c8fc0800000000000000
+      internalID: -3491270389661143753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_63
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f991b35cd5da9cb0800000000000000
+      internalID: -4856334105891989007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_64
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c9ed6c284f0a2a0800000000000000
+      internalID: -6728109000772117491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_65
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1cbbe3da6b8c250800000000000000
+      internalID: 5965218561650311649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_66
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3c226a679dd0c030800000000000000
+      internalID: 3513051351743605823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_67
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f680aa7a8969eb80800000000000000
+      internalID: -8365038789380241676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_68
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c821528cde94dc120800000000000000
+      internalID: 2435684259091255948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_69
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d8258aaf29f32730800000000000000
+      internalID: 3973293279390542034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1088
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ebcc9f739e85ce50800000000000000
+      internalID: 6829021174129544162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_71
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1088
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 474b969fc6b64b8c0800000000000000
+      internalID: -3984441654530952076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_72
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1088
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b63629e23a689bce0800000000000000
+      internalID: -1388930974647950485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_73
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1088
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f870ac04306c39a0800000000000000
+      internalID: -6252016406030681868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_74
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1088
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6767655e19ff779e0800000000000000
+      internalID: -1623548138560784778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_75
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1088
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17afac3c40a6661e0800000000000000
+      internalID: -2204958398854006159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75100065e799eebf0800000000000000
+      internalID: -293128157844733609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_77
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3416a952a9ed7640800000000000000
+      internalID: 5079472838241817663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_78
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1ee8c9847c9e1300800000000000000
+      internalID: 224789055756889629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_79
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 287345f490dee36f0800000000000000
+      internalID: -702863867581810814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_80
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20f0873aa577471a0800000000000000
+      internalID: -6812689105131401470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_81
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b654567732aad1dc0800000000000000
+      internalID: -3666587452306012821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_82
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09185ed9f463b9550800000000000000
+      internalID: 6168583830193406352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_83
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 960
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45337f87698562360800000000000000
+      internalID: 7144495262167675732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_84
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 960
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1c36d6c618207470800000000000000
+      internalID: 8390250184081554462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_85
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 960
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd26290bbfcd6740800000000000000
+      internalID: 5146998351373675984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_86
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 960
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00811a12b6a6270e0800000000000000
+      internalID: -2273637853510428672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_87
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 960
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 664f46ee47596ecd0800000000000000
+      internalID: -2529169811273616282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe6487c1e906abbb0800000000000000
+      internalID: -4919513410750101777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_89
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 896
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1776ed8186cefb6d0800000000000000
+      internalID: -2972397297203255439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_90
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 896
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f73f55066bb113aa0800000000000000
+      internalID: -6183130343288736897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_91
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 896
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb3a760a00cc1640800000000000000
+      internalID: 5052124031293733884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_92
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 896
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf3089ee4187ae50800000000000000
+      internalID: 6820562336600834014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_93
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 896
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16080dc4a6c5d4580800000000000000
+      internalID: -8841308881833394079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_94
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 832
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c2c3e2308ce92bf0800000000000000
+      internalID: -348487460790746432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_95
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 832
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ad2d95021aaee520800000000000000
+      internalID: 2733309018240789927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_96
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 832
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f85ed07ec1150d0800000000000000
+      internalID: -3435933262010806490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_97
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 832
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6d73d8bec6d8db50800000000000000
+      internalID: 6618275835773418860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_98
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 832
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0318dfc2f79e8af0800000000000000
+      internalID: -392209048409730292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_99
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 832
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1361efbdfe3555220800000000000000
+      internalID: 2473975859963106865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d19c69d7690b7e0800000000000000
+      internalID: -1751734788902281949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_101
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 768
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db0ded8e13f970c30800000000000000
+      internalID: 4325601003821781181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_102
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4b10d8602341d060800000000000000
+      internalID: 6976431104250092362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_103
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 768
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b501002636443bdf0800000000000000
+      internalID: -165713567645953957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_104
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21d4dce2177a51840800000000000000
+      internalID: 5194241849800084754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_105
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 768
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e05a689a69f630580800000000000000
+      internalID: -8862116948855053042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_106
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1658467e22e3b2070800000000000000
+      internalID: 8082622275878421857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_107
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 704
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41638c171f2ebe4f0800000000000000
+      internalID: -798294982304188908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_108
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 704
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 094a5aff612e12870800000000000000
+      internalID: 8656448547189007504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_109
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 704
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17363289e55a2d4e0800000000000000
+      internalID: -1958321062254779535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_110
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 704
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b91c0537d948b820800000000000000
+      internalID: 2934176345888659894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_111
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 704
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e1d62e9cd15ab9b0800000000000000
+      internalID: -5063644823036702234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d08402b9aae56c210800000000000000
+      internalID: 1352872824911448077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_113
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 640
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f22addac8a748cf70800000000000000
+      internalID: 9207688228442579503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_114
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7fd75f494e50340800000000000000
+      internalID: 4829517503849691105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_115
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 640
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e03a99a2bbe7abdb0800000000000000
+      internalID: -4775365112534293746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_116
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd69a5738ce4634d0800000000000000
+      internalID: -3155247867097344291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_117
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 640
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 056d36c94aed5f530800000000000000
+      internalID: 3888258651884082768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_118
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3604ea5f85ff9b060800000000000000
+      internalID: 6969882655876595811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_119
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 576
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03155823ef006beb0800000000000000
+      internalID: -4704571668972613328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_120
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 576
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c78672c2e04f2ad0800000000000000
+      internalID: -2724887906866526264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_121
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2b78e9e9396e7400800000000000000
+      internalID: 323811920675633965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_122
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 576
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb38da6003950c5e0800000000000000
+      internalID: -1891413780690271297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_123
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 576
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e6501fa262b1aa0800000000000000
+      internalID: -6189311297016467854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_124
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fc4bd7287ed06090800000000000000
+      internalID: -8043184326837580559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_125
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 512
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 872b68e90acc60290800000000000000
+      internalID: -7924421504085347720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_126
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df530ac70dfda7df0800000000000000
+      internalID: -181586748418017795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_127
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 512
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dee71584e9f61b40800000000000000
+      internalID: 5410786762213027538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_128
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479694f1df3645720800000000000000
+      internalID: 2834000004325665140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_129
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 512
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca1415521dbe6eb40800000000000000
+      internalID: 5469318080994820524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2a625b20de4b700800000000000000
+      internalID: 555329249958339321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_131
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae3f3157f65b02e0800000000000000
+      internalID: -2158535976174010717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_132
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eda0deac7c47d9b10800000000000000
+      internalID: 1989875011819473630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_133
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 068e6a2f76414d100800000000000000
+      internalID: 131752725785798752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_134
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1109df49bc7ac19b0800000000000000
+      internalID: -5108023384525139951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_135
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d94d9052bfd23e80800000000000000
+      internalID: -8200246014538593839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_136
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c664e7cc3b5d7aa90800000000000000
+      internalID: -7302633302551280020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_137
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d9b5a7114791cb20800000000000000
+      internalID: 3152967519961463251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_138
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da5bedd5d1e43a1c0800000000000000
+      internalID: -4493662115149728339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_139
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e9ee5b146895f350800000000000000
+      internalID: 6049909230165486057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_140
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 134f02f2b557e1ca0800000000000000
+      internalID: -6044264615391464399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_141
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d51a2252ea250e860800000000000000
+      internalID: 7557131082628505949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_142
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 639f17b77948dc680800000000000000
+      internalID: -8733178316255528650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_143
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ddd4c21721042870800000000000000
+      internalID: 8657045651043179990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_144
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d862ac70ad7ac3d0800000000000000
+      internalID: -3185595658171946795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_145
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6b3f891ea8042770800000000000000
+      internalID: 8584996333521156974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_146
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f6b9f86590a78160800000000000000
+      internalID: 7027762307106715378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_147
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a88d5a0cc119c20800000000000000
+      internalID: 3211379623033604750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_148
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce61c3dfbeff3da0800000000000000
+      internalID: -5962767281770369332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_149
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5390dc73dad0ec940800000000000000
+      internalID: 5318203247587821877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_150
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e0226e0c7db0b800800000000000000
+      internalID: 626208688719405285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_151
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be24175fa7fd09bf0800000000000000
+      internalID: -319509854346460437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_152
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 020bf6a4799b15570800000000000000
+      internalID: 8453742034991165472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_153
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 733ee26146e446e40800000000000000
+      internalID: 5648726024405312311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_154
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3df149c7e573e9610800000000000000
+      internalID: 1629800994111234003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_155
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22d349dbc09f115e0800000000000000
+      internalID: -1940496131304440542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_156
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d59bac513ef1092e0800000000000000
+      internalID: -2121160364307859107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_157
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85a78fd1bcc62f720800000000000000
+      internalID: 2878482731480152664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_158
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 465066638cdd45b20800000000000000
+      internalID: 3122364293650449764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_159
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef4bd032c9e685c0800000000000000
+      internalID: -4213423381105913874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3efada74557f7f450800000000000000
+      internalID: 6122634164080324579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_161
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84fab9dc5aa215bd0800000000000000
+      internalID: -2643284614682267832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_162
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca50f7001026d070800000000000000
+      internalID: 8130721430488767178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_163
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5912d21008c4f2730800000000000000
+      internalID: 3976481108650697109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_164
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5960e9ba4cd297c0800000000000000
+      internalID: -4065945300057953958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_165
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1f8d256e94297910800000000000000
+      internalID: 1835538585851105051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_166
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a2694842b855dd0800000000000000
+      internalID: -2497937429347554744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_167
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 494680e15abf82670800000000000000
+      internalID: 8514331782135964820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_168
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbd8448700ecd9260800000000000000
+      internalID: 7106062288473591229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_169
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cafa37b84833b7560800000000000000
+      internalID: 7312495064334446508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_170
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f19f3c7a660dee660800000000000000
+      internalID: 7417094775645665567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_171
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c23a65b581b7cac0800000000000000
+      internalID: -3834901369850285367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_172
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a165f730d21857a30800000000000000
+      internalID: 4212415056807155226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_173
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a70762cb18efddd0800000000000000
+      internalID: -2458991665597708378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_174
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17dba1d5d6bbc31c0800000000000000
+      internalID: -4522533847398957711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_175
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d387ff011c77b84b0800000000000000
+      internalID: -5437120454022170563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_176
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aad903e81dccbd50800000000000000
+      internalID: 6754499047920884386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOT_Construtor_177
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23cd802903fc5a100800000000000000
+      internalID: 118728772710620210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ac51557d347d7a14ea99f38ebd816297
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.375},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      BOT_Construtor_0: -1812931693711799070
+      BOT_Construtor_1: -2823908422505155412
+      BOT_Construtor_10: 2506704515184102092
+      BOT_Construtor_100: -1751734788902281949
+      BOT_Construtor_101: 4325601003821781181
+      BOT_Construtor_102: 6976431104250092362
+      BOT_Construtor_103: -165713567645953957
+      BOT_Construtor_104: 5194241849800084754
+      BOT_Construtor_105: -8862116948855053042
+      BOT_Construtor_106: 8082622275878421857
+      BOT_Construtor_107: -798294982304188908
+      BOT_Construtor_108: 8656448547189007504
+      BOT_Construtor_109: -1958321062254779535
+      BOT_Construtor_11: 7861057047567725044
+      BOT_Construtor_110: 2934176345888659894
+      BOT_Construtor_111: -5063644823036702234
+      BOT_Construtor_112: 1352872824911448077
+      BOT_Construtor_113: 9207688228442579503
+      BOT_Construtor_114: 4829517503849691105
+      BOT_Construtor_115: -4775365112534293746
+      BOT_Construtor_116: -3155247867097344291
+      BOT_Construtor_117: 3888258651884082768
+      BOT_Construtor_118: 6969882655876595811
+      BOT_Construtor_119: -4704571668972613328
+      BOT_Construtor_12: -9087844006642003872
+      BOT_Construtor_120: -2724887906866526264
+      BOT_Construtor_121: 323811920675633965
+      BOT_Construtor_122: -1891413780690271297
+      BOT_Construtor_123: -6189311297016467854
+      BOT_Construtor_124: -8043184326837580559
+      BOT_Construtor_125: -7924421504085347720
+      BOT_Construtor_126: -181586748418017795
+      BOT_Construtor_127: 5410786762213027538
+      BOT_Construtor_128: 2834000004325665140
+      BOT_Construtor_129: 5469318080994820524
+      BOT_Construtor_13: 46354852830334596
+      BOT_Construtor_130: 555329249958339321
+      BOT_Construtor_131: -2158535976174010717
+      BOT_Construtor_132: 1989875011819473630
+      BOT_Construtor_133: 131752725785798752
+      BOT_Construtor_134: -5108023384525139951
+      BOT_Construtor_135: -8200246014538593839
+      BOT_Construtor_136: -7302633302551280020
+      BOT_Construtor_137: 3152967519961463251
+      BOT_Construtor_138: -4493662115149728339
+      BOT_Construtor_139: 6049909230165486057
+      BOT_Construtor_14: 503380275112052874
+      BOT_Construtor_140: -6044264615391464399
+      BOT_Construtor_141: 7557131082628505949
+      BOT_Construtor_142: -8733178316255528650
+      BOT_Construtor_143: 8657045651043179990
+      BOT_Construtor_144: -3185595658171946795
+      BOT_Construtor_145: 8584996333521156974
+      BOT_Construtor_146: 7027762307106715378
+      BOT_Construtor_147: 3211379623033604750
+      BOT_Construtor_148: -5962767281770369332
+      BOT_Construtor_149: 5318203247587821877
+      BOT_Construtor_15: 3240800990940228593
+      BOT_Construtor_150: 626208688719405285
+      BOT_Construtor_151: -319509854346460437
+      BOT_Construtor_152: 8453742034991165472
+      BOT_Construtor_153: 5648726024405312311
+      BOT_Construtor_154: 1629800994111234003
+      BOT_Construtor_155: -1940496131304440542
+      BOT_Construtor_156: -2121160364307859107
+      BOT_Construtor_157: 2878482731480152664
+      BOT_Construtor_158: 3122364293650449764
+      BOT_Construtor_159: -4213423381105913874
+      BOT_Construtor_16: 4597412050835244419
+      BOT_Construtor_160: 6122634164080324579
+      BOT_Construtor_161: -2643284614682267832
+      BOT_Construtor_162: 8130721430488767178
+      BOT_Construtor_163: 3976481108650697109
+      BOT_Construtor_164: -4065945300057953958
+      BOT_Construtor_165: 1835538585851105051
+      BOT_Construtor_166: -2497937429347554744
+      BOT_Construtor_167: 8514331782135964820
+      BOT_Construtor_168: 7106062288473591229
+      BOT_Construtor_169: 7312495064334446508
+      BOT_Construtor_17: -3517091553226802416
+      BOT_Construtor_170: 7417094775645665567
+      BOT_Construtor_171: -3834901369850285367
+      BOT_Construtor_172: 4212415056807155226
+      BOT_Construtor_173: -2458991665597708378
+      BOT_Construtor_174: -4522533847398957711
+      BOT_Construtor_175: -5437120454022170563
+      BOT_Construtor_176: 6754499047920884386
+      BOT_Construtor_177: 118728772710620210
+      BOT_Construtor_18: -1859534065139054074
+      BOT_Construtor_19: 8023056324020889426
+      BOT_Construtor_2: -8354330917002200380
+      BOT_Construtor_20: -9144500915505362350
+      BOT_Construtor_21: 285547305140389595
+      BOT_Construtor_22: 5295966165491433395
+      BOT_Construtor_23: 5545098782707327594
+      BOT_Construtor_24: 4050162370687350560
+      BOT_Construtor_25: 4004193942310635385
+      BOT_Construtor_26: 6020773871127572392
+      BOT_Construtor_27: -6552011841857181153
+      BOT_Construtor_28: -9175418400034817522
+      BOT_Construtor_29: -1014610808402910293
+      BOT_Construtor_3: 1348218929837640950
+      BOT_Construtor_30: -2794019301720127805
+      BOT_Construtor_31: 7907614650028935088
+      BOT_Construtor_32: -7552863452354310632
+      BOT_Construtor_33: 8885716864142674162
+      BOT_Construtor_34: -4029366603893240091
+      BOT_Construtor_35: -6795674930692795879
+      BOT_Construtor_36: -4277865417300357177
+      BOT_Construtor_37: 9140053843535301761
+      BOT_Construtor_38: -5590536012085381686
+      BOT_Construtor_39: 7167146297968293798
+      BOT_Construtor_4: 5117749724186243883
+      BOT_Construtor_40: 707279020478334715
+      BOT_Construtor_41: -7850740707685680231
+      BOT_Construtor_42: 3047973265105957189
+      BOT_Construtor_43: 136916216444521375
+      BOT_Construtor_44: -2364023857274633323
+      BOT_Construtor_45: 2919713520407119425
+      BOT_Construtor_46: 3313334463950317112
+      BOT_Construtor_47: -6621957827866597619
+      BOT_Construtor_48: -627414906829557873
+      BOT_Construtor_49: -3703763949926064443
+      BOT_Construtor_5: -4193698742964466503
+      BOT_Construtor_50: -5057297676424859540
+      BOT_Construtor_51: -5684742510353013713
+      BOT_Construtor_52: 7943728738159384542
+      BOT_Construtor_53: -8404666497232813937
+      BOT_Construtor_54: -1279380780366683639
+      BOT_Construtor_55: 5958297433190287906
+      BOT_Construtor_56: -406959678135005549
+      BOT_Construtor_57: -7387543786909792964
+      BOT_Construtor_58: -8864431241096794289
+      BOT_Construtor_59: 34982889842658076
+      BOT_Construtor_6: 7556776672159450710
+      BOT_Construtor_60: -1913042555598003237
+      BOT_Construtor_61: -355808688240671502
+      BOT_Construtor_62: -3491270389661143753
+      BOT_Construtor_63: -4856334105891989007
+      BOT_Construtor_64: -6728109000772117491
+      BOT_Construtor_65: 5965218561650311649
+      BOT_Construtor_66: 3513051351743605823
+      BOT_Construtor_67: -8365038789380241676
+      BOT_Construtor_68: 2435684259091255948
+      BOT_Construtor_69: 3973293279390542034
+      BOT_Construtor_7: -326262768899993656
+      BOT_Construtor_70: 6829021174129544162
+      BOT_Construtor_71: -3984441654530952076
+      BOT_Construtor_72: -1388930974647950485
+      BOT_Construtor_73: -6252016406030681868
+      BOT_Construtor_74: -1623548138560784778
+      BOT_Construtor_75: -2204958398854006159
+      BOT_Construtor_76: -293128157844733609
+      BOT_Construtor_77: 5079472838241817663
+      BOT_Construtor_78: 224789055756889629
+      BOT_Construtor_79: -702863867581810814
+      BOT_Construtor_8: 4288052713991740992
+      BOT_Construtor_80: -6812689105131401470
+      BOT_Construtor_81: -3666587452306012821
+      BOT_Construtor_82: 6168583830193406352
+      BOT_Construtor_83: 7144495262167675732
+      BOT_Construtor_84: 8390250184081554462
+      BOT_Construtor_85: 5146998351373675984
+      BOT_Construtor_86: -2273637853510428672
+      BOT_Construtor_87: -2529169811273616282
+      BOT_Construtor_88: -4919513410750101777
+      BOT_Construtor_89: -2972397297203255439
+      BOT_Construtor_9: -1989665641977247230
+      BOT_Construtor_90: -6183130343288736897
+      BOT_Construtor_91: 5052124031293733884
+      BOT_Construtor_92: 6820562336600834014
+      BOT_Construtor_93: -8841308881833394079
+      BOT_Construtor_94: -348487460790746432
+      BOT_Construtor_95: 2733309018240789927
+      BOT_Construtor_96: -3435933262010806490
+      BOT_Construtor_97: 6618275835773418860
+      BOT_Construtor_98: -392209048409730292
+      BOT_Construtor_99: 2473975859963106865
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

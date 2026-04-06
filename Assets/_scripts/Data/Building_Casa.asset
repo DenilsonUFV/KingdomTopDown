@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec5fa9a4917749d46afdd4819f1269fd, type: 3}
-  m_Name: Building_Tenda
+  m_Name: Building_Casa
   m_EditorClassIdentifier: Assembly-CSharp::BuildingData
-  buildingName: Tenda
-  spriteBuilt: {fileID: -6694875992507473619, guid: bc73a2249d705ad419af8fd7af9ef99e, type: 3}
-  spriteBuilding: {fileID: -6694875992507473619, guid: bc73a2249d705ad419af8fd7af9ef99e, type: 3}
+  buildingName: Casa
+  spriteBuilt: {fileID: -1309427334820629646, guid: 72cc2b197d074cc40a5e54e05d33497a, type: 3}
+  spriteBuilding: {fileID: -1309427334820629646, guid: 72cc2b197d074cc40a5e54e05d33497a, type: 3}
   spriteSlot: {fileID: 6232825715084013417, guid: 4d837276e2040454aacf8bf3041eac68, type: 3}
-  coinCost: 3
-  needsBuilder: 0
+  coinCost: 5
+  needsBuilder: 1
   buildTime: 10
-  nextLevel: {fileID: 11400000, guid: 5c7bf50b4437d6d40ace0b24b287698b, type: 2}
+  nextLevel: {fileID: 0}
   childSlots:
   - localOffset: {x: -3, y: 0}
     defaultData: {fileID: 0}

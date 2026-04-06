@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Building : MonoBehaviour, IInteractable
@@ -23,6 +24,9 @@ public class Building : MonoBehaviour, IInteractable
     private BuildingState _state = BuildingState.Built;
     private int _coinsInvested = 0;
     private Coroutine _refundRoutine;
+
+    private readonly List<BotBrain> _activeBuilders = new();
+    public int ActiveBuilderCount => _activeBuilders.Count;
 
     public BuildingState State => _state;
     public BuildingData Data => currentData;
@@ -76,6 +80,7 @@ public class Building : MonoBehaviour, IInteractable
         if (_state == BuildingState.WaitingBuilder) return false;
         if (_state == BuildingState.UnderConstruction) return false;
         return true;
+        // ✅ Aceita Built E WaitingFunds
     }
 
     /// <summary>
@@ -89,7 +94,11 @@ public class Building : MonoBehaviour, IInteractable
         ResourceManager.Spend(ResourceType.Coin, 1);
         _coinsInvested++;
 
-        // Cancela o timer de reembolso se estava contando
+        // Muda estado para WaitingFunds ao receber primeira moeda
+        if (_state == BuildingState.Built)
+            _state = BuildingState.WaitingFunds;
+
+        // Cancela o timer de reembolso ao receber moeda
         if (_refundRoutine != null)
         {
             StopCoroutine(_refundRoutine);
@@ -98,9 +107,7 @@ public class Building : MonoBehaviour, IInteractable
 
         _ui?.Refresh(this);
 
-        int required = currentData.nextLevel.coinCost;
-
-        if (_coinsInvested >= required)
+        if (_coinsInvested >= currentData.nextLevel.coinCost)
             OnFundingComplete();
 
         return true;
@@ -113,6 +120,8 @@ public class Building : MonoBehaviour, IInteractable
     public void StartRefundTimer(float delay = 3f)
     {
         if (_coinsInvested <= 0) return;
+
+        // ✅ Aceita WaitingFunds também — não só Built
         if (_state != BuildingState.WaitingFunds) return;
 
         if (_refundRoutine != null)
@@ -125,14 +134,18 @@ public class Building : MonoBehaviour, IInteractable
     {
         yield return new WaitForSeconds(delay);
 
+        // ✅ Verifica WaitingFunds — não Built
         if (_state != BuildingState.WaitingFunds) yield break;
+        if (_coinsInvested <= 0) yield break;
 
-        // Devolve as moedas no chão
         SpawnRefundCoins();
+
         _coinsInvested = 0;
         _state = BuildingState.Built;
 
         _ui?.Refresh(this);
+
+        Debug.Log($"[Building] {_coinsInvested} moedas reembolsadas!");
     }
 
     private void SpawnRefundCoins()
@@ -160,36 +173,58 @@ public class Building : MonoBehaviour, IInteractable
         OnFullyFunded?.Invoke(this);
         OnAnyBuildingFullyFunded?.Invoke(this);
 
-        if (!currentData.nextLevel.needsBuilder)
+        if (currentData.nextLevel.needsBuilder)
+            BotManager.Instance?.RequestBuilders(this); // ← notifica o BotManager
+        else
             StartCoroutine(BuildRoutine());
     }
 
     /// <summary>
     /// Chamado pelo BuilderBot quando começa a construir.
     /// </summary>
-    public void StartConstruction()
+    public void StartConstruction(BotBrain bot)
     {
         if (_state != BuildingState.WaitingBuilder) return;
         _state = BuildingState.UnderConstruction;
         _ui?.Refresh(this);
-        StartCoroutine(BuildRoutine());
+
+        if (_buildRoutine != null) StopCoroutine(_buildRoutine);
+        _buildRoutine = StartCoroutine(BuildRoutine());
     }
+
+    private Coroutine _buildRoutine;
 
     private IEnumerator BuildRoutine()
     {
-        // Sprite de andaime
+        float totalTime = currentData.nextLevel.buildTime;
+        float elapsed = 0f;
+
         if (currentData.nextLevel.spriteBuilding != null)
             _sr.sprite = currentData.nextLevel.spriteBuilding;
 
-        yield return new WaitForSeconds(currentData.nextLevel.buildTime);
+        _ui?.StartProgress(totalTime);
 
+        while (elapsed < totalTime)
+        {
+            float speedMultiplier = 1f + (_activeBuilders.Count - 1) * 0.3f;
+            elapsed += Time.deltaTime * speedMultiplier;
+            _ui?.UpdateProgressManual(elapsed / totalTime);
+            yield return null;
+        }
+
+        _ui?.StopProgress();
         CompleteBuild();
     }
 
     private void CompleteBuild()
     {
-        BuildingData nextData = currentData.nextLevel;
+        // Libera todos os BOTs
+        foreach (BotBrain bot in _activeBuilders.ToList())
+            bot.ReleaseBuilding();
 
+        _activeBuilders.Clear();
+
+        BuildingData nextData = currentData.nextLevel;
         currentData = nextData;
         _coinsInvested = 0;
         _state = BuildingState.Built;
@@ -200,11 +235,27 @@ public class Building : MonoBehaviour, IInteractable
         _ui?.Refresh(this);
         OnBuilt?.Invoke(this);
 
-        // Spawna BOT construtor ao evoluir de fogueira para tenda
         if (currentData.buildingName == "Tenda")
             BotSpawner.Instance?.SpawnBuilderBot(transform.position);
 
         Debug.Log($"[Building] {currentData.buildingName} construída!");
+    }
+
+    /// <summary>
+    /// BOT chegou e está construindo.
+    /// Quanto mais BOTs, mais rápido.
+    /// </summary>
+    public void RegisterBuilder(BotBrain bot)
+    {
+        if (_activeBuilders.Contains(bot)) return;
+        _activeBuilders.Add(bot);
+
+        Debug.Log($"[Building] {bot.name} chegou. BOTs ativos: {_activeBuilders.Count}");
+    }
+
+    public void UnregisterBuilder(BotBrain bot)
+    {
+        _activeBuilders.Remove(bot);
     }
 
     #endregion
