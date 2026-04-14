@@ -18,6 +18,6 @@ MonoBehaviour:
   spriteSlot: {fileID: 6232825715084013417, guid: 4d837276e2040454aacf8bf3041eac68, type: 3}
   coinCost: 0
   needsBuilder: 0
-  buildTime: 5
+  buildTime: 3
   nextLevel: {fileID: 11400000, guid: a7238465c722c3948bed73919bb32292, type: 2}
   childSlots: []

@@ -34,6 +34,7 @@ public class Building : MonoBehaviour, IInteractable
     public int CoinsRemaining => currentData?.nextLevel != null
                                            ? currentData.nextLevel.coinCost - _coinsInvested
                                            : 0;
+    public float distanceToStartBuilding = 1f;
 
     // Eventos
     public event Action<Building> OnFullyFunded;
@@ -174,7 +175,10 @@ public class Building : MonoBehaviour, IInteractable
         OnAnyBuildingFullyFunded?.Invoke(this);
 
         if (currentData.nextLevel.needsBuilder)
+        {
+            distanceToStartBuilding = GetMaxRadius(_sr) + 1f;
             BotManager.Instance?.RequestBuilders(this); // ← notifica o BotManager
+        }
         else
             StartCoroutine(BuildRoutine());
     }
@@ -200,7 +204,10 @@ public class Building : MonoBehaviour, IInteractable
         float elapsed = 0f;
 
         if (currentData.nextLevel.spriteBuilding != null)
+        {
             _sr.sprite = currentData.nextLevel.spriteBuilding;
+            UpdatePolygonCollider();
+        }
 
         _ui?.StartProgress(totalTime);
 
@@ -250,7 +257,19 @@ public class Building : MonoBehaviour, IInteractable
         if (_activeBuilders.Contains(bot)) return;
         _activeBuilders.Add(bot);
 
+
         Debug.Log($"[Building] {bot.name} chegou. BOTs ativos: {_activeBuilders.Count}");
+    }
+
+    private float GetMaxRadius(SpriteRenderer sr)
+    {
+        if (sr.sprite == null) return 0f;
+
+        // Extents é a metade do tamanho total (Size / 2)
+        Vector3 extents = sr.sprite.bounds.extents;
+
+        // Retorna o maior valor entre a metade da largura e a metade da altura
+        return Mathf.Max(extents.x, extents.y);
     }
 
     public void UnregisterBuilder(BotBrain bot)
@@ -277,7 +296,16 @@ public class Building : MonoBehaviour, IInteractable
     private void RefreshVisual()
     {
         if (_sr != null && currentData?.spriteBuilt != null)
+        {
             _sr.sprite = currentData.spriteBuilt;
+            UpdatePolygonCollider();
+        }
+    }
+
+    private void UpdatePolygonCollider()
+    {
+        Destroy(GetComponent<PolygonCollider2D>());
+        gameObject.AddComponent<PolygonCollider2D>();
     }
 
     #endregion

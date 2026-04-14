@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
-using Pathfinding;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Seeker))]
 public class BotMovement : MonoBehaviour
 {
     // ─────────────────────────────────────────
@@ -10,9 +8,12 @@ public class BotMovement : MonoBehaviour
 
     [Header("Movimento")]
     [SerializeField] private float moveSpeed = 2f;
-    [SerializeField] private float arriveRadius = 0.3f;
-    [SerializeField] private float nextWaypointDist = 0.5f;  // distância para avançar waypoint
-    [SerializeField] private float repathInterval = 0.5f;   // recalcula path a cada X segundos
+    [SerializeField] private float arriveRadius = 0.2f;
+
+    [Header("Inteligência de Obstáculos")]
+    [SerializeField] private LayerMask obstacleLayer;
+    [SerializeField] private float detectionRange = 1.5f;
+    [SerializeField] private float sideSensorAngle = 35f;
 
     #endregion
 
@@ -20,19 +21,14 @@ public class BotMovement : MonoBehaviour
     #region Estado
 
     private Rigidbody2D _rb;
-    private Seeker _seeker;
-
-    private Path _path;
-    private int _waypointIndex = 0;
+    private Vector2 _targetPosition;
     private bool _isMoving = false;
-    private Vector2 _targetPos;
-    private float _repathTimer = 0f;
 
     public bool IsMoving => _isMoving;
-    public bool HasArrived => Vector2.Distance(transform.position, _targetPos) <= arriveRadius;
-    public Vector2 MoveInput => _currentVelocity.normalized;
-
-    private Vector2 _currentVelocity;
+    public bool HasArrived => Vector2.Distance(transform.position, _targetPosition) <= arriveRadius;
+    public Vector2 MoveInput => _isMoving
+                                   ? ((Vector2)_targetPosition - (Vector2)transform.position).normalized
+                                   : Vector2.zero;
 
     #endregion
 
@@ -42,79 +38,63 @@ public class BotMovement : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _seeker = GetComponent<Seeker>();
         _rb.gravityScale = 0f;
         _rb.freezeRotation = true;
     }
 
     private void FixedUpdate()
     {
-        if (!_isMoving) { _rb.linearVelocity = Vector2.zero; _currentVelocity = Vector2.zero; return; }
+        if (!_isMoving) { _rb.linearVelocity = Vector2.zero; return; }
         if (HasArrived) { Stop(); return; }
 
-        FollowPath();
+        Vector2 dir = ((Vector2)_targetPosition - (Vector2)transform.position).normalized;
 
-        // Recalcula path periodicamente (desvia se obstáculo mudou)
-        _repathTimer += Time.fixedDeltaTime;
-        if (_repathTimer >= repathInterval)
-        {
-            _repathTimer = 0f;
-            RequestPath(_targetPos);
-        }
+        Vector2 smartDirection = AvoidObstacles(dir);
+
+       // _rb.linearVelocity = dir * moveSpeed;
+
+        _rb.linearVelocity = smartDirection * moveSpeed;
     }
 
     #endregion
 
     // ─────────────────────────────────────────
-    #region Pathfinding
+    #region API
+
+    private Vector2 AvoidObstacles(Vector2 dir)
+    {
+        // Sensores de detecção
+        RaycastHit2D hitCenter = Physics2D.CircleCast(transform.position, 0.3f, dir, detectionRange, obstacleLayer);
+
+        if (hitCenter.collider != null)
+        {
+            // Se houver algo, tenta desviar usando as normais do objeto atingido
+            Vector2 leftDir = Quaternion.Euler(0, 0, sideSensorAngle) * dir;
+            Vector2 rightDir = Quaternion.Euler(0, 0, -sideSensorAngle) * dir;
+
+            RaycastHit2D hitLeft = Physics2D.Raycast(transform.position, leftDir, detectionRange, obstacleLayer);
+            RaycastHit2D hitRight = Physics2D.Raycast(transform.position, rightDir, detectionRange, obstacleLayer);
+
+            if (hitLeft.collider == null) return leftDir;
+            if (hitRight.collider == null) return rightDir;
+
+            // Se ambos lados têm obstáculos, usa a normal da colisão para se afastar
+            return Vector2.Reflect(dir, hitCenter.normal);
+        }
+
+        return dir;
+    }
 
     public void MoveTo(Vector2 target)
     {
-        _targetPos = target;
+        _targetPosition = target;
         _isMoving = true;
-        _repathTimer = 0f;
-        RequestPath(target);
-    }
-
-    private void RequestPath(Vector2 target)
-    {
-        if (_seeker.IsDone())
-            _seeker.StartPath(transform.position, target, OnPathComplete);
-    }
-
-    private void OnPathComplete(Path p)
-    {
-        if (p.error) { Debug.LogWarning($"[BotMovement] Path error: {p.errorLog}"); return; }
-
-        _path = p;
-        _waypointIndex = 0;
-    }
-
-    private void FollowPath()
-    {
-        if (_path == null || _waypointIndex >= _path.vectorPath.Count)
-        {
-            _rb.linearVelocity = Vector2.zero;
-            return;
-        }
-
-        Vector2 waypoint = _path.vectorPath[_waypointIndex];
-        Vector2 direction = (waypoint - (Vector2)transform.position).normalized;
-
-        _currentVelocity = direction * moveSpeed;
-        _rb.linearVelocity = _currentVelocity;
-
-        // Avança para o próximo waypoint se chegou perto o suficiente
-        if (Vector2.Distance(transform.position, waypoint) < nextWaypointDist)
-            _waypointIndex++;
     }
 
     public void Stop()
     {
         _isMoving = false;
-        _path = null;
         _rb.linearVelocity = Vector2.zero;
-        _currentVelocity = Vector2.zero;
     }
 
     #endregion

@@ -129,14 +129,17 @@ public class BotBrain : MonoBehaviour
     private Vector2 GetRandomWanderPoint()
     {
         // Tenta até 10 vezes achar um ponto sem obstáculo
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 10000; i++)
         {
             Vector2 randomPoint = (Vector2)transform.position
                                 + Random.insideUnitCircle * wanderRadius;
 
             // Verifica se o ponto não está dentro de um obstáculo
             if (!Physics2D.OverlapCircle(randomPoint, 0.3f, obstacleLayer))
+            {
+                //Debug.Log("RANDOM POINT "+randomPoint);
                 return randomPoint;
+            }
         }
 
         // Fallback — fica parado
@@ -146,11 +149,11 @@ public class BotBrain : MonoBehaviour
     private bool IsPathBlocked()
     {
         Vector2 dir = (_movement.MoveInput).normalized;
-        float dist = 0.5f;
+        float dist = 1f;
 
         RaycastHit2D hit = Physics2D.CircleCast(
             transform.position,
-            0.2f,
+            1f,
             dir,
             dist,
             obstacleLayer
@@ -179,6 +182,8 @@ public class BotBrain : MonoBehaviour
                 yield break;
             }
 
+            buildCheckRadius = _targetBuilding.distanceToStartBuilding;
+            Debug.Log("AQUIIIIII "+buildCheckRadius);
             float dist = Vector2.Distance(transform.position, _targetBuilding.transform.position);
 
             if (dist <= buildCheckRadius)
@@ -281,11 +286,30 @@ public class BotBrain : MonoBehaviour
     /// </summary>
     public void ReleaseBuilding()
     {
-        _targetBuilding = null;
-        _pendingBuilding = null;
+        if (_targetBuilding != null)
+            _targetBuilding.UnregisterBuilder(this);
 
-        if (_state != BotState.Dead)
+        Debug.Log("2AQUIIIIIIIIIIIIIIIIIIIII-----------------------------------------------");
+        // Para a animação assim que termina
+        _botAnimator?.StopBuildAnimation();
+
+        _targetBuilding = null;
+
+        if (_pendingBuilding != null)
+        {
+            _targetBuilding = _pendingBuilding;
+            _pendingBuilding = null;
+            EnterState(BotState.GoingToBuild);
+        }
+        else
+        {
             EnterState(BotState.Wandering);
+        }
+
+       // _targetBuilding = null;
+       // _pendingBuilding = null;
+        //if (_state != BotState.Dead)
+        //    EnterState(BotState.Wandering);
     }
 
     /// <summary>

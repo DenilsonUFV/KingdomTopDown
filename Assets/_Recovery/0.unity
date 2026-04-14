@@ -687,11 +687,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BotMovement
   moveSpeed: 2
   arriveRadius: 0.2
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  detectionRange: 1.5
-  sideSensorAngle: 35
 --- !u!50 &199523353
 Rigidbody2D:
   serializedVersion: 5
@@ -738,7 +733,7 @@ MonoBehaviour:
   buildCheckRadius: 1
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 384
+    m_Bits: 256
 --- !u!212 &199523355
 SpriteRenderer:
   serializedVersion: 2
@@ -2870,9 +2865,9 @@ GameObject:
   - component: {fileID: 881652986}
   - component: {fileID: 881652989}
   - component: {fileID: 881652991}
+  - component: {fileID: 881652990}
   - component: {fileID: 881652992}
   - component: {fileID: 881652993}
-  - component: {fileID: 881652994}
   m_Layer: 7
   m_Name: Campfire
   m_TagString: Untagged
@@ -2991,55 +2986,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::YSortingStatic
   yOffset: 0
   sortingPrecision: 100
---- !u!114 &881652991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881652985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 979e89d30ccf52b41bdd5292dc6ffc6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Building
-  currentData: {fileID: 11400000, guid: 54a53941d62ab824989311e6a75eb06d, type: 2}
-  _sr: {fileID: 881652987}
-  _ui: {fileID: 881652992}
-  distanceToStartBuilding: 1
---- !u!114 &881652992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881652985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b756504eff45889418142a86e92b2d88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BuildingUI
-  root: {fileID: 1513526839}
-  costText: {fileID: 2089504206}
-  progressText: {fileID: 1308713815}
-  slider: {fileID: 119404556}
-  colorStart: {r: 0.2, g: 0.6, b: 1, a: 1}
-  colorComplete: {r: 0.2, g: 0.9, b: 0.3, a: 1}
---- !u!114 &881652993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881652985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68c532ac605ef1644bad3c80c58c95aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CoinSpawnHelper
-  coinPrefab: {fileID: 5761243535731525573, guid: 469316711563943408e54973be50bb8a, type: 3}
---- !u!60 &881652994
-PolygonCollider2D:
+--- !u!61 &881652990
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3072,7 +3020,7 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.38}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -3082,13 +3030,54 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.4375, y: 0.75}
-      - {x: -0.5, y: 0.75}
-      - {x: -0.5, y: 0}
-      - {x: 0.4375, y: 0}
-  m_UseDelaunayMesh: 1
+  m_Size: {x: 1, y: 0.7}
+  m_EdgeRadius: 0
+--- !u!114 &881652991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881652985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979e89d30ccf52b41bdd5292dc6ffc6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Building
+  currentData: {fileID: 11400000, guid: 54a53941d62ab824989311e6a75eb06d, type: 2}
+  _sr: {fileID: 881652987}
+  _ui: {fileID: 881652992}
+--- !u!114 &881652992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881652985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b756504eff45889418142a86e92b2d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BuildingUI
+  root: {fileID: 1513526839}
+  costText: {fileID: 2089504206}
+  progressText: {fileID: 1308713815}
+  slider: {fileID: 119404556}
+  colorStart: {r: 0.2, g: 0.6, b: 1, a: 1}
+  colorComplete: {r: 0.2, g: 0.9, b: 0.3, a: 1}
+--- !u!114 &881652993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881652985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68c532ac605ef1644bad3c80c58c95aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinSpawnHelper
+  coinPrefab: {fileID: 5761243535731525573, guid: 469316711563943408e54973be50bb8a, type: 3}
 --- !u!1 &895558124
 GameObject:
   m_ObjectHideFlags: 0
@@ -10741,11 +10730,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BotMovement
   moveSpeed: 2
   arriveRadius: 0.2
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  detectionRange: 1.5
-  sideSensorAngle: 35
 --- !u!50 &1512707805
 Rigidbody2D:
   serializedVersion: 5
@@ -10792,7 +10776,7 @@ MonoBehaviour:
   buildCheckRadius: 1
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 384
+    m_Bits: 256
 --- !u!212 &1512707807
 SpriteRenderer:
   serializedVersion: 2
@@ -31206,7 +31190,7 @@ CompositeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 1
+  m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
