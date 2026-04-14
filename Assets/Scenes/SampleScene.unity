@@ -576,6 +576,7 @@ GameObject:
   - component: {fileID: 199523349}
   - component: {fileID: 199523348}
   - component: {fileID: 199523357}
+  - component: {fileID: 199523358}
   m_Layer: 0
   m_Name: BOT_Construcao
   m_TagString: Untagged
@@ -687,6 +688,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BotMovement
   moveSpeed: 2
   arriveRadius: 0.2
+  nextWaypointDist: 0.5
+  repathInterval: 0.5
 --- !u!50 &199523353
 Rigidbody2D:
   serializedVersion: 5
@@ -729,7 +732,7 @@ MonoBehaviour:
   wanderRadius: 10
   idleTimeMin: 1
   idleTimeMax: 3
-  wanderInterval: 0.5
+  wanderInterval: 3
   buildCheckRadius: 1
   obstacleLayer:
     serializedVersion: 2
@@ -802,7 +805,7 @@ Transform:
   m_GameObject: {fileID: 199523347}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.6, y: 0.96, z: 0}
+  m_LocalPosition: {x: 0.21000004, y: -1.8600001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -822,6 +825,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::YSorting
   yOffset: 0
   sortingPrecision: 1000
+--- !u!114 &199523358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199523347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AstarPathfindingProject::Pathfinding.Seeker
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
 --- !u!1 &237630097
 GameObject:
   m_ObjectHideFlags: 0
@@ -10507,6 +10538,93 @@ MonoBehaviour:
   coinFlySpeed: 4
   coinArcHeight: 0.8
   refundDelay: 3
+--- !u!1 &1450752970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450752972}
+  - component: {fileID: 1450752971}
+  m_Layer: 0
+  m_Name: Pathfinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1450752971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450752970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AstarPathfindingProject::AstarPath
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAACwn+twrBRHXwIAABgFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMuS2jAQ/BVK55CyWQhLbgmvzYGFWpLaiy9CGmMVsuSSZJ7Fv2ck29ghJ8R0z0xPa+QbEcoWwJw2SyP4SnMg33vEn8mXXgu+wZnutdqKKzScT8Fd5kk0cD6oExrjsU+zOgdnBPuh9tKTIwyWSqTa5HO+h6m2zmI4pdICQkY7n60wdOuRM/70Jz7lgqfB2J+ueJpEvTseGSgHpqXGrzWz4VW0UjFJ8wK419yyh+Ovo6byKBAVzlNzooAxLaWwtRziLkUYd1tkYMDPywXF6YKEKiEDsc+cr9jNXqepBVfrMvQyEwZtqsqSn7ryLqf2UIk7Uln6Ri+vlayq6Oo/vB8HODU6f2v6xpHv4TLBDh/0wqh1HXO74VkrPQ4enag80J2EzwzUu14aXSqOoDOlTy0tDGbt38do0wzYoY1XUptg07csWtejpyvyQ9zD+OepFPkuWDmsAlupg+NhA8Dg7fxCxWE/bF0Co17GHwu/6b67SDWwEMY6hOoxlde306XxVLLAg7eelW6qjYIQrScpQFHpLhus4p6v8AnrdH1CFtS/mLp3jTUP4SklhFt+FD1BG316XJbN9GkFNluXTgoFrWgPvKNNU61UtWFdS5q0bWlSyjpp+1Lwf1eLwI6mL7t4PAT4xigf9uN0xIejQTrZxdE4xuywe0LhnFRuKqG1PXhpqi2ucM+aD0lvaWgRtp0belqKa647lguV6i0zAGpdVXgIB4NN8GHyORdo0BacEypcN7klRGp2AJ48CiVh0vnZGZq0VRJSiKN2PpKQafhyJMSHH7u8MXAUcPLNm2J3cv8LUEsDBBQAAAgIAACwn+ucUuHabQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrRSalJimnGSoblJaqpZcmKKia5hmmmKialRmmWSoYG5YXKqUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACwn+twrBRHXwIAABgFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACwn+ucUuHabQAAAHgAAAAJACQAAAAAAAAAAAAAAKwCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAZAMAAAAA
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 10
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &1450752972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450752970}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1453412140
 GameObject:
   m_ObjectHideFlags: 0
@@ -10605,6 +10723,7 @@ GameObject:
   - component: {fileID: 1512707801}
   - component: {fileID: 1512707800}
   - component: {fileID: 1512707799}
+  - component: {fileID: 1512707809}
   m_Layer: 0
   m_Name: BOT_Construcao (1)
   m_TagString: Untagged
@@ -10730,6 +10849,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BotMovement
   moveSpeed: 2
   arriveRadius: 0.2
+  nextWaypointDist: 0.5
+  repathInterval: 0.5
 --- !u!50 &1512707805
 Rigidbody2D:
   serializedVersion: 5
@@ -10772,7 +10893,7 @@ MonoBehaviour:
   wanderRadius: 10
   idleTimeMin: 1
   idleTimeMax: 3
-  wanderInterval: 0.5
+  wanderInterval: 3
   buildCheckRadius: 1
   obstacleLayer:
     serializedVersion: 2
@@ -10845,12 +10966,40 @@ Transform:
   m_GameObject: {fileID: 1512707798}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.6, y: 5.07, z: 0}
+  m_LocalPosition: {x: 33.56, y: 2.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1512707809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512707798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AstarPathfindingProject::Pathfinding.Seeker
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
 --- !u!1 &1513526839
 GameObject:
   m_ObjectHideFlags: 0
@@ -32489,3 +32638,4 @@ SceneRoots:
   - {fileID: 2140953528}
   - {fileID: 199523356}
   - {fileID: 1512707808}
+  - {fileID: 1450752972}

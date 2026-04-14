@@ -18,7 +18,7 @@ MonoBehaviour:
   spriteSlot: {fileID: 6232825715084013417, guid: 4d837276e2040454aacf8bf3041eac68, type: 3}
   coinCost: 5
   needsBuilder: 1
-  buildTime: 10
+  buildTime: 15
   nextLevel: {fileID: 0}
   childSlots:
   - localOffset: {x: -3, y: 0}

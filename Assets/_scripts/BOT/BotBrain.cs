@@ -202,18 +202,22 @@ public class BotBrain : MonoBehaviour
         if (_targetBuilding == null) { EnterState(BotState.Wandering); yield break; }
 
         _targetBuilding.RegisterBuilder(this);
-
-        // Inicia a construção se ainda não foi iniciada
         _targetBuilding.StartConstruction(this);
 
-        // Anima continuamente enquanto constrói
+        // Toca UMA vez ao chegar
+        _botAnimator?.PlayBuildAnimation(_targetBuilding.transform.position);
+        Debug.Log("0AQUIIIIIIIIIIIIIIIIIIIII-----------------------------------------------");
+
+        // Aguarda terminar sem ficar resetando a animação
         while (_targetBuilding != null
             && _targetBuilding.State == BuildingState.UnderConstruction)
         {
-            _botAnimator?.PlayBuildAnimation(_targetBuilding.transform.position);
-            yield return new WaitForSeconds(1.5f);
-        }
+            Debug.Log("1AQUIIIIIIIIIIIIIIIIIIIII-----------------------------------------------");
 
+            yield return null;
+        }
+        Debug.Log("2AQUIIIIIIIIIIIIIIIIIIIII-----------------------------------------------");
+        // Para a animação assim que termina
         _botAnimator?.StopBuildAnimation();
 
         if (_targetBuilding != null)
