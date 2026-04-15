@@ -86,6 +86,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "InteractHold",
+                    "type": "Button",
+                    "id": "586e9ba3-8cae-4ebe-ad7b-1a5d2abe9789",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -429,6 +438,17 @@
                     "action": "Crouch",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0765a1a6-418d-4a49-ac93-652c4e762ee8",
+                    "path": "<Keyboard>/e",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": ";KeyboardMouse",
+                    "action": "InteractHold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -521,6 +541,15 @@
                     "name": "Join",
                     "type": "Button",
                     "id": "adc905dc-22af-4dd1-87d3-4a22a22eb72e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "InteractHold",
+                    "type": "Button",
+                    "id": "7b6d8d2d-b0de-4b7e-9989-236ada36428d",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -888,6 +917,17 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "Join",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "78b5f30e-0435-4f86-8b13-f3ed453b8b40",
+                    "path": "<Keyboard>/numpad0",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": ";KeyboardMouse",
+                    "action": "InteractHold",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

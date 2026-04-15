@@ -86,7 +86,7 @@ public class BuildingInteractionHandler : MonoBehaviour
         InputActionMap map = inputActionAsset.FindActionMap(mapName, throwIfNotFound: false);
         if (map == null) return;
 
-        _interactAction = map.FindAction("Interact", throwIfNotFound: false);
+        _interactAction = map.FindAction("InteractHold", throwIfNotFound: false);
     }
 
     #endregion
@@ -146,7 +146,7 @@ public class BuildingInteractionHandler : MonoBehaviour
         Vector3 to = _targetBuilding.transform.position;
 
         Building buildingRef = _targetBuilding;
-        buildingRef._state = BuildinState.WaitingBuilder;
+        //buildingRef.ForceStateToWaitingBuilder();
 
         // Voa a moeda com sprite correto
         CoinFlyEffect.Spawn(

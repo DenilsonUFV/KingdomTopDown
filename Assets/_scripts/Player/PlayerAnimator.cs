@@ -87,7 +87,7 @@ public class PlayerAnimator : MonoBehaviour
 
     public void PlayActionAnimation(ToolType tool, Vector3 targetPosition)
     {
-        Debug.Log("AQUIIIIIIIIIIII  "+GetTriggerHash(tool));
+        
         Vector2 dirToTarget = ((Vector2)targetPosition - (Vector2)transform.position).normalized;
         ApplyDirectionAndFlip(dirToTarget);
         _animator.SetTrigger(GetTriggerHash(tool));

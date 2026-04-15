@@ -165,6 +165,11 @@ public class Building : MonoBehaviour, IInteractable
     // ─────────────────────────────────────────
     #region Funding & Build
 
+    public void ForceStateToWaitingBuilder()
+    {
+        _state = BuildingState.WaitingBuilder;
+    }
+
     private void OnFundingComplete()
     {
         _state = currentData.nextLevel.needsBuilder
