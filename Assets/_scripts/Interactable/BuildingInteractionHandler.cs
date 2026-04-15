@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class BuildingInteractionHandler : MonoBehaviour
@@ -96,6 +96,7 @@ public class BuildingInteractionHandler : MonoBehaviour
 
     private void OnHoldStarted(InputAction.CallbackContext ctx)
     {
+        Debug.Log("OnHoldStarted");
         _targetBuilding = FindNearestBuilding();
 
         if (_targetBuilding == null) return;
@@ -107,8 +108,9 @@ public class BuildingInteractionHandler : MonoBehaviour
 
     private void OnHoldCanceled(InputAction.CallbackContext ctx)
     {
+        Debug.Log("OnHoldCanceled " + _targetBuilding);
         // Inicia reembolso se parou antes de completar
-        if (_targetBuilding != null && _targetBuilding.CoinsInvested > 0)
+        if (_targetBuilding != null /*&& _targetBuilding.CoinsInvested > 0*/)
         {
             Debug.Log($"[BuildingInteraction] Parou de investir — reembolso em {refundDelay}s");
             _targetBuilding.StartRefundTimer(refundDelay);
@@ -144,6 +146,7 @@ public class BuildingInteractionHandler : MonoBehaviour
         Vector3 to = _targetBuilding.transform.position;
 
         Building buildingRef = _targetBuilding;
+        buildingRef._state = BuildinState.WaitingBuilder;
 
         // Voa a moeda com sprite correto
         CoinFlyEffect.Spawn(

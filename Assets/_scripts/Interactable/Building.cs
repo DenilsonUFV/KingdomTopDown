@@ -120,7 +120,9 @@ public class Building : MonoBehaviour, IInteractable
     /// </summary>
     public void StartRefundTimer(float delay = 3f)
     {
-        if (_coinsInvested <= 0) return;
+        //if (_coinsInvested <= 0) return;
+
+        Debug.Log("StartRefundTimer " + _state);
 
         // ✅ Aceita WaitingFunds também — não só Built
         if (_state != BuildingState.WaitingFunds) return;
@@ -140,13 +142,13 @@ public class Building : MonoBehaviour, IInteractable
         if (_coinsInvested <= 0) yield break;
 
         SpawnRefundCoins();
+        Debug.Log($"[Building] {_coinsInvested} moedas reembolsadas!");
 
         _coinsInvested = 0;
         _state = BuildingState.Built;
 
         _ui?.Refresh(this);
 
-        Debug.Log($"[Building] {_coinsInvested} moedas reembolsadas!");
     }
 
     private void SpawnRefundCoins()
