@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class BotHealth : MonoBehaviour
+public class BotHealth : MonoBehaviour, IDamageable
 {
     // ─────────────────────────────────────────
     #region Configuração
@@ -20,7 +20,8 @@ public class BotHealth : MonoBehaviour
     private int _currentHealth;
     private bool _isDead = false;
 
-    public bool IsDead => _isDead;
+    public int  CurrentHealth => _currentHealth;
+    public bool IsDead        => _isDead;
 
     #endregion
 
