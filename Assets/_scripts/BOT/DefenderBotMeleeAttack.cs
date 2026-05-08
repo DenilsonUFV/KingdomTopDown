@@ -28,6 +28,10 @@ public class DefenderBotMeleeAttack : MonoBehaviour, IAttack
 
         dmg.TakeDamage(damage);
 
+        HitFeedback feedback = target.GetComponent<HitFeedback>()
+                            ?? target.GetComponentInParent<HitFeedback>();
+        feedback?.ApplyHit(transform.position);
+
         if (hitEffectPrefab != null)
             Instantiate(hitEffectPrefab, target.position, Quaternion.identity);
 

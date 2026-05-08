@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4734761587106201753}
   - component: {fileID: 7344021324674239229}
   - component: {fileID: 7151824738702087116}
+  - component: {fileID: 6861347595256341469}
   m_Layer: 0
   m_Name: BOT_Construcao
   m_TagString: Untagged
@@ -164,7 +165,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   detectionRange: 1.5
-  sideSensorAngle: 35
+  bodyRadius: 0.25
+  rayCount: 9
+  sensorArc: 120
+  stuckDetectTime: 0.6
+  stuckPushForce: 4
 --- !u!114 &4191429891186455230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,3 +274,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::YSorting
   yOffset: 0
   sortingPrecision: 1000
+--- !u!114 &6861347595256341469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28693929343685745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0614b8323ed880641808d4e1ab3095ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitFeedback
+  knockbackForce: 5
+  knockbackDuration: 0.18
+  flashColor: {r: 1, g: 1, b: 1, a: 0.11764706}
+  flashInterval: 0.07
+  flashCount: 3

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3052237509635116454}
   - component: {fileID: 7389144103097420730}
   - component: {fileID: 7253554098157383051}
-  - component: {fileID: 5302346850169924685}
   - component: {fileID: 3035717124937907166}
   - component: {fileID: 4777580363213177927}
   - component: {fileID: 3599021160798844870}
@@ -19,6 +18,8 @@ GameObject:
   - component: {fileID: 6756199376611488432}
   - component: {fileID: 6080167132984055988}
   - component: {fileID: 5994566748398347094}
+  - component: {fileID: -2056247044343954109}
+  - component: {fileID: 5481533363925453851}
   m_Layer: 0
   m_Name: BOT_Combate
   m_TagString: Untagged
@@ -90,7 +91,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1812931693711799070, guid: 2dc7d8f8648397b41a0ecbf84aeb9b37, type: 3}
+  m_Sprite: {fileID: -6867757744863099905, guid: 3c9ab745ecae2784b9ca20f467dde154, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127,25 +128,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5302346850169924685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3631276584804972899}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f4169d3db6907942a4e69490c7c4a77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BotHealth
-  maxHealth: 3
-  deathLoot:
-  - itemData: {fileID: 11400000, guid: f7657d20e7503bb4b818d6dc15a04057, type: 2}
-    collectiblePrefab: {fileID: 5761243535731525573, guid: 469316711563943408e54973be50bb8a, type: 3}
-    dropChance: 1
-    minAmount: 1
-    maxAmount: 1
 --- !u!70 &3035717124937907166
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -191,9 +173,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3631276584804972899}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40857f6dfa093f140baee8beb5e60e47, type: 2}
+  m_Controller: {fileID: 9100000, guid: 57d00a253a9c2f64b8e16a0f2191d408, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -237,6 +219,8 @@ MonoBehaviour:
   attackDamage: 3
   attackCooldown: 1.2
   patrolRadius: 6
+  patrolMinDistance: 2
+  patrolTimeout: 6
   idleTimeMin: 1
   idleTimeMax: 2.5
 --- !u!114 &6756199376611488432
@@ -271,6 +255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DefenderBotHealth
   maxHealth: 8
   deathLoot: []
+  _currentHealth: 8
 --- !u!114 &5994566748398347094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,4 +268,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73f21de1bfcd5e141b2f37d1d09e8d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DefenderBotMeleeAttack
-  hitEffectPrefab: {fileID: 4503725412311130492, guid: b7b47078d32d4354587ce8614333c1f5, type: 3}
+  hitEffectPrefab: {fileID: 0}
+--- !u!114 &-2056247044343954109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3631276584804972899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5029808925a9a34baf152fb93e2ad54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefenderBotAnimator
+--- !u!114 &5481533363925453851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3631276584804972899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0614b8323ed880641808d4e1ab3095ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitFeedback
+  knockbackForce: 5
+  knockbackDuration: 0.18
+  flashColor: {r: 1, g: 1, b: 1, a: 0.11764706}
+  flashInterval: 0.07
+  flashCount: 3

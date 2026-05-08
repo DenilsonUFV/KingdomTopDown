@@ -33,6 +33,11 @@ public class PlayerController : MonoBehaviour
         Inventory = GetComponent<PlayerInventory>();
     }
 
+    private void Start()
+    {
+        Star.Instance.SetPlayer(transform);
+    }
+
     private void OnEnable()
     {
         PlayerManager.Register(this);

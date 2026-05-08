@@ -11,9 +11,8 @@ public class BuildingInteractionHandler : MonoBehaviour
     [SerializeField] private int playerIndex = 0;
 
     [Header("Moedas")]
-    [SerializeField] private float coinInterval = 1f;
-    [SerializeField] private Sprite coinSprite;           // ← arraste o sprite da moeda
-    [SerializeField] private float coinFlySpeed = 4f;
+    [SerializeField] private float coinInterval  = 1f;
+    [SerializeField] private float coinFlySpeed  = 4f;
     [SerializeField] private float coinArcHeight = 0.8f;
 
     [Header("Reembolso")]
@@ -146,13 +145,12 @@ public class BuildingInteractionHandler : MonoBehaviour
         Vector3 to = _targetBuilding.transform.position;
 
         Building buildingRef = _targetBuilding;
-        //buildingRef.ForceStateToWaitingBuilder();
+        Sprite   icon        = buildingRef.Data?.coinIcon;
 
-        // Voa a moeda com sprite correto
         CoinFlyEffect.Spawn(
             from,
             to,
-            coinSprite,
+            icon,
             onArrive: () => buildingRef.ReceiveCoin(),
             flySpeed: coinFlySpeed,
             arcHeight: coinArcHeight

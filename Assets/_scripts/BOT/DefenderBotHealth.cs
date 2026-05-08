@@ -22,7 +22,7 @@ public class DefenderBotHealth : MonoBehaviour, IDamageable
     // ─────────────────────────────────────────
     #region Estado
 
-    private int  _currentHealth;
+    public int  _currentHealth;
     private bool _isDead;
 
     public int  CurrentHealth => _currentHealth;
@@ -55,7 +55,6 @@ public class DefenderBotHealth : MonoBehaviour, IDamageable
         if (_isDead) return;
 
         _currentHealth -= damage;
-        Debug.Log($"[DefenderHealth] {gameObject.name} recebeu {damage} de dano. HP: {_currentHealth}/{maxHealth}");
 
         if (_currentHealth <= 0)
             Die();

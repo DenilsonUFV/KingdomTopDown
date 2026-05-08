@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class InteractionSystem : MonoBehaviour
@@ -20,13 +20,29 @@ public class InteractionSystem : MonoBehaviour
     #region Referências
 
     private PlayerInventory _inventory;
-    private PlayerMovement _playerMovement;
-    private PlayerAnimator _playerAnimator;
-    private InputAction _interactAction;
+    private PlayerMovement  _playerMovement;
+    private PlayerAnimator  _playerAnimator;
+    private InputAction     _interactAction;
 
     public IInteractable CurrentTarget { get; private set; }
 
+    /// <summary>
+    /// Quando preenchido (ex.: pilar carregado), é retornado como alvo prioritário
+    /// independentemente de distância ou collider.
+    /// </summary>
+    public static IInteractable ForcedTarget { get; set; }
+
     private static readonly Collider2D[] _buffer = new Collider2D[8];
+
+    // ── Detecção tap vs hold ──────────────────
+    // Tap = press + release em menos de tapThreshold segundos.
+    // Hold = segurado além do threshold → ignorado pelo InteractionSystem
+    //        (tratado pela action InteractHold no PillarInteractionHandler).
+    [Header("Tap")]
+    [Tooltip("Tempo máximo (segundos) para considerar um press como tap.")]
+    [SerializeField] private float tapThreshold = 0.28f;
+
+    private float _pressTime = -1f;
 
     #endregion
 
@@ -35,7 +51,7 @@ public class InteractionSystem : MonoBehaviour
 
     private void Awake()
     {
-        _inventory = GetComponent<PlayerInventory>();
+        _inventory      = GetComponent<PlayerInventory>();
         _playerMovement = GetComponent<PlayerMovement>();
         _playerAnimator = GetComponentInChildren<PlayerAnimator>();
         SetupInput();
@@ -45,9 +61,11 @@ public class InteractionSystem : MonoBehaviour
     {
         _interactAction?.Enable();
         if (_interactAction != null)
-            _interactAction.performed += OnInteractPerformed;
+        {
+            _interactAction.started  += OnInteractStarted;
+            _interactAction.canceled += OnInteractCanceled;
+        }
 
-        // Ouve o fim da animação para liberar o movimento
         if (_playerAnimator != null)
             _playerAnimator.OnActionAnimationEnd += OnActionAnimationEnd;
     }
@@ -55,13 +73,15 @@ public class InteractionSystem : MonoBehaviour
     private void OnDisable()
     {
         if (_interactAction != null)
-            _interactAction.performed -= OnInteractPerformed;
+        {
+            _interactAction.started  -= OnInteractStarted;
+            _interactAction.canceled -= OnInteractCanceled;
+        }
         _interactAction?.Disable();
 
         if (_playerAnimator != null)
             _playerAnimator.OnActionAnimationEnd -= OnActionAnimationEnd;
 
-        // Garante que o movimento é liberado ao desabilitar
         _playerMovement?.UnlockMovement();
     }
 
@@ -93,6 +113,10 @@ public class InteractionSystem : MonoBehaviour
 
     private IInteractable FindBestInteractable()
     {
+        // Objeto forçado (ex.: pilar carregado) tem prioridade absoluta
+        if (ForcedTarget != null && ForcedTarget.CanInteract)
+            return ForcedTarget;
+
         int count = Physics2D.OverlapCircleNonAlloc(
             transform.position,
             interactRadius,
@@ -100,8 +124,8 @@ public class InteractionSystem : MonoBehaviour
             interactableLayer
         );
 
-        IInteractable best = null;
-        float bestDist = float.MaxValue;
+        IInteractable best     = null;
+        float         bestDist = float.MaxValue;
 
         for (int i = 0; i < count; i++)
         {
@@ -122,30 +146,39 @@ public class InteractionSystem : MonoBehaviour
     // ─────────────────────────────────────────
     #region Interação
 
-    private void OnInteractPerformed(InputAction.CallbackContext ctx)
+    private void OnInteractStarted(InputAction.CallbackContext ctx)
+    {
+        _pressTime = Time.time;
+    }
+
+    private void OnInteractCanceled(InputAction.CallbackContext ctx)
+    {
+        if (_pressTime >= 0f && (Time.time - _pressTime) < tapThreshold)
+            ExecuteTap();
+
+        _pressTime = -1f;
+    }
+
+    private void ExecuteTap()
     {
         IInteractable target = FindBestInteractable();
         if (target == null) return;
 
         Vector3 targetPosition = ((MonoBehaviour)target).transform.position;
-        bool actionExecuted = false;
+        bool actionExecuted;
 
         if (target.RequiredTool == ToolType.None)
-        {
             actionExecuted = target.Interact(gameObject);
-        }
         else if (_inventory.HasTool(target.RequiredTool))
-        {
             actionExecuted = target.Interact(gameObject);
-        }
         else
         {
             Debug.Log($"[Interaction] Precisa de: {target.RequiredTool}");
+            return;
         }
 
         if (actionExecuted)
         {
-            // Trava o movimento durante a animação
             if (target.RequiredTool != ToolType.None)
                 _playerMovement?.LockMovement();
             _playerAnimator?.PlayActionAnimation(target.RequiredTool, targetPosition);
@@ -154,7 +187,6 @@ public class InteractionSystem : MonoBehaviour
 
     private void OnActionAnimationEnd()
     {
-        // Libera o movimento ao terminar a animação
         _playerMovement?.UnlockMovement();
     }
 

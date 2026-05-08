@@ -92,6 +92,11 @@ public class Projectile : MonoBehaviour
 
         _hasHit = true;
         dmg.TakeDamage(_damage);
+
+        HitFeedback feedback = other.GetComponent<HitFeedback>()
+                            ?? other.GetComponentInParent<HitFeedback>();
+        feedback?.ApplyHit(transform.position);
+
         Destroy(gameObject);
     }
 

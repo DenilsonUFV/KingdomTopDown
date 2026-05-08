@@ -32,6 +32,7 @@ public class EnemyBrain : MonoBehaviour
     private EnemyHealth         _health;
     private EnemyTargetScanner  _scanner;
     private IAttack             _attack;
+    private EnemyAnimator       _animator;
 
     #endregion
 
@@ -42,6 +43,7 @@ public class EnemyBrain : MonoBehaviour
     private Transform       _currentTarget;
     private EnemySpawnPoint _spawnPoint;
     private Coroutine       _stateRoutine;
+    private bool            _isDaytime = false;
 
     public EnemyState State  => _state;
     public bool       IsDead => _state == EnemyState.Morto;
@@ -57,6 +59,7 @@ public class EnemyBrain : MonoBehaviour
         _health   = GetComponent<EnemyHealth>();
         _scanner  = GetComponent<EnemyTargetScanner>();
         _attack   = GetComponent<IAttack>();
+        _animator = GetComponent<EnemyAnimator>();
     }
 
     private void Start()
@@ -80,6 +83,32 @@ public class EnemyBrain : MonoBehaviour
         EnterState(EnemyState.Patrulhando);
     }
 
+    private void OnEnable()
+    {
+        DayNightCycle.OnDayStarted   += OnDayStarted;
+        DayNightCycle.OnNightStarted += OnNightStarted;
+        Star.OnDropped               += OnStarDropped;
+    }
+
+    private void OnDisable()
+    {
+        DayNightCycle.OnDayStarted   -= OnDayStarted;
+        DayNightCycle.OnNightStarted -= OnNightStarted;
+        Star.OnDropped               -= OnStarDropped;
+    }
+
+    private void Update()
+    {
+        if (_state != EnemyState.Morto && _health != null && _health.IsDead)
+            HandleDeath();
+
+        // CarregandoEstrela está indo ao spawner — deixa terminar mesmo de dia
+        if (_isDaytime && _state != EnemyState.Morto
+                       && _state != EnemyState.Recuando
+                       && _state != EnemyState.CarregandoEstrela)
+            OrderRetreat();
+    }
+
     private void OnDestroy()
     {
         EnemyManager.Instance?.Unregister(this);
@@ -100,12 +129,14 @@ public class EnemyBrain : MonoBehaviour
 
         _stateRoutine = newState switch
         {
-            EnemyState.Idle         => StartCoroutine(IdleRoutine()),
-            EnemyState.Patrulhando  => StartCoroutine(PatrolRoutine()),
-            EnemyState.Perseguindo  => StartCoroutine(ChaseRoutine()),
-            EnemyState.Atacando     => StartCoroutine(AttackRoutine()),
-            EnemyState.Recuando     => StartCoroutine(RetreatRoutine()),
-            EnemyState.Morto        => StartCoroutine(DeathRoutine()),
+            EnemyState.Idle              => StartCoroutine(IdleRoutine()),
+            EnemyState.Patrulhando       => StartCoroutine(PatrolRoutine()),
+            EnemyState.Perseguindo       => StartCoroutine(ChaseRoutine()),
+            EnemyState.Atacando          => StartCoroutine(AttackRoutine()),
+            EnemyState.Recuando          => StartCoroutine(RetreatRoutine()),
+            EnemyState.BuscandoEstrela   => StartCoroutine(BuscandoEstrelaRoutine()),
+            EnemyState.CarregandoEstrela => StartCoroutine(CarregandoEstrelaRoutine()),
+            EnemyState.Morto             => StartCoroutine(DeathRoutine()),
             _ => null
         };
     }
@@ -227,7 +258,8 @@ public class EnemyBrain : MonoBehaviour
                 yield break;
             }
 
-            // Executa o ataque (melee ou ranged dependendo do componente presente)
+            // Dispara animação e executa o ataque
+            _animator?.PlayAttackAnimation(_currentTarget.position);
             _attack?.PerformAttack(_currentTarget, damage);
 
             yield return new WaitForSeconds(cooldown);
@@ -270,12 +302,17 @@ public class EnemyBrain : MonoBehaviour
 
     private void HandleDeath()
     {
+        // Se morrer carregando a Estrela, ela cai no chão novamente
+        if (_state == EnemyState.CarregandoEstrela)
+            Star.Instance?.ForceDropAt(transform.position);
+
         EnterState(EnemyState.Morto);
     }
 
     private IEnumerator DeathRoutine()
     {
-        _movement.Stop();
+        _movement.Freeze();
+        _animator?.PlayDeathAnimation();
 
         // Drop de loot
         DropLoot();
@@ -313,11 +350,84 @@ public class EnemyBrain : MonoBehaviour
     /// <summary>Define o ponto de spawn de origem deste inimigo.</summary>
     public void SetSpawnPoint(EnemySpawnPoint point) => _spawnPoint = point;
 
-    /// <summary>Chamado pelo EnemyManager ao amanhecer.</summary>
+    /// <summary>Chamado ao amanhecer — inicia recuo. Não interrompe quem já está entregando a Estrela.</summary>
     public void OrderRetreat()
     {
-        if (_state == EnemyState.Morto) return;
+        if (_state == EnemyState.Morto || _state == EnemyState.CarregandoEstrela) return;
         EnterState(EnemyState.Recuando);
+    }
+
+    #endregion
+
+    // ─────────────────────────────────────────
+    #region Handlers Dia/Noite e Estrela
+
+    private void OnDayStarted()
+    {
+        _isDaytime = true;
+        OrderRetreat();
+    }
+
+    private void OnNightStarted()
+    {
+        _isDaytime = false;
+    }
+
+    private void OnStarDropped()
+    {
+        if (_state == EnemyState.Morto || _state == EnemyState.Recuando) return;
+        EnterState(EnemyState.BuscandoEstrela);
+    }
+
+    #endregion
+
+    // ─────────────────────────────────────────
+    #region Estrela
+
+    private IEnumerator BuscandoEstrelaRoutine()
+    {
+        while (true)
+        {
+            // Estrela foi recolhida por outro inimigo ou voltou ao player
+            if (Star.Instance == null || !Star.Instance.IsDropped)
+            {
+                EnterState(EnemyState.Patrulhando);
+                yield break;
+            }
+
+            _movement.MoveTo(Star.Instance.Position);
+
+            if (_movement.HasArrived)
+            {
+                bool picked = Star.Instance.TryPickUp(transform);
+                EnterState(picked ? EnemyState.CarregandoEstrela : EnemyState.Patrulhando);
+                yield break;
+            }
+
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    private IEnumerator CarregandoEstrelaRoutine()
+    {
+        Vector2 deliveryPos = _spawnPoint != null
+            ? (Vector2)_spawnPoint.SpawnPosition
+            : (Vector2)transform.position;
+
+        _movement.MoveTo(deliveryPos);
+
+        float timeout = 30f;
+        float elapsed = 0f;
+
+        while (!_movement.HasArrived)
+        {
+            elapsed += Time.deltaTime;
+            if (elapsed >= timeout) break;
+            yield return null;
+        }
+
+        Star.Instance?.Deliver();
+        Destroy(gameObject);
     }
 
     #endregion

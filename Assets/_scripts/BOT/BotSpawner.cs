@@ -6,6 +6,8 @@ public class BotSpawner : MonoBehaviour
 
     [SerializeField] private GameObject builderBotPrefab;
     [SerializeField] private GameObject defenderBotPrefab;
+    
+    [SerializeField] private GameObject defenderArcherBotPrefab;
 
     private void Awake()
     {
@@ -31,5 +33,15 @@ public class BotSpawner : MonoBehaviour
         if (defenderBotPrefab == null) return;
         Instantiate(defenderBotPrefab, position, Quaternion.identity);
         Debug.Log("[BotSpawner] BOT Defensor spawnado!");
+    }
+
+    /// <summary>
+    /// Spawna um BOT defensor. Para uso futuro.
+    /// </summary>
+    public void SpawnDefenderArcherBot(Vector3 position)
+    {
+        if (defenderArcherBotPrefab == null) return;
+        Instantiate(defenderArcherBotPrefab, position, Quaternion.identity);
+        Debug.Log("[BotSpawner] BOT Defensor Archer spawnado!");
     }
 }

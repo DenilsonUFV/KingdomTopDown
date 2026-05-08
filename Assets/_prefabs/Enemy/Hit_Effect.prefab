@@ -83,8 +83,8 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5795784937631756294, guid: bee6b40fb12aa754a9ac7f6d42410e58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
+  m_FlipX: 1
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5

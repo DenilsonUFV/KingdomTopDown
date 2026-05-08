@@ -47,9 +47,12 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     // ─────────────────────────────────────────
     #region Unity Callbacks
 
+    private PlayerHitEffect _hitEffect;
+
     private void Awake()
     {
         _currentHealth = maxHealth;
+        _hitEffect     = GetComponent<PlayerHitEffect>();
     }
 
     private void Update()
@@ -67,15 +70,14 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     {
         if (_isDead || _invincibilityTimer > 0f) return;
 
-        _currentHealth       -= damage;
-        _invincibilityTimer   = invincibilityDuration;
+        _invincibilityTimer = invincibilityDuration;
 
-        Debug.Log($"[PlayerHealth] {gameObject.name} recebeu {damage} de dano. HP: {_currentHealth}/{maxHealth}");
+        // O player não tem HP — o dano faz perder a Estrela
+        if (Star.Instance != null)
+            Star.Instance.Drop(transform.position);
 
+        _hitEffect?.TriggerHit();
         OnDamaged?.Invoke(_currentHealth);
-
-        if (_currentHealth <= 0)
-            Die();
     }
 
     #endregion

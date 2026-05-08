@@ -74,5 +74,32 @@ public class BotManager : MonoBehaviour
                 bot.ReleaseBuilding();
     }
 
+    /// <summary>
+    /// Verifica se há construções aguardando um BOT e atribui este BOT à mais próxima.
+    /// Chamado quando um novo BOT spawna ou termina uma obra.
+    /// Retorna true se uma construção foi encontrada e atribuída.
+    /// </summary>
+    public bool TryAssignToPendingBuilding(BotBrain bot)
+    {
+        Building[] all     = FindObjectsByType<Building>(FindObjectsSortMode.None);
+        Building   nearest = null;
+        float      bestDist = float.MaxValue;
+
+        foreach (Building b in all)
+        {
+            if (b.State != BuildingState.WaitingBuilder) continue;
+
+            int assigned = _bots.Count(other => other.TargetBuilding == b);
+            if (assigned >= MaxBotsPerBuilding) continue;
+
+            float dist = Vector2.Distance(bot.transform.position, b.transform.position);
+            if (dist < bestDist) { bestDist = dist; nearest = b; }
+        }
+
+        if (nearest == null) return false;
+        bot.AssignBuilding(nearest);
+        return true;
+    }
+
     #endregion
 }

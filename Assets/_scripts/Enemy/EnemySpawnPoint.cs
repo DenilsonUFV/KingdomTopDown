@@ -2,10 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public struct SpawnReward
+{
+    public GameObject prefab;
+    [Min(1)] public int amount;
+}
+
 /// <summary>
 /// Ponto de spawn de inimigos no mapa.
 /// Spawna inimigos ao anoitecer até esgotar as cargas totais (maxSpawns).
 /// Quando a noite acaba, os inimigos retornam a este ponto e somem.
+/// Ao esgotar todas as cargas, no próximo amanhecer dropa recompensas e se destrói.
 /// </summary>
 public class EnemySpawnPoint : MonoBehaviour
 {
@@ -28,6 +36,10 @@ public class EnemySpawnPoint : MonoBehaviour
 
     [Tooltip("Dispersão aleatória ao redor do ponto de spawn.")]
     [SerializeField] private float spawnRadius = 1f;
+
+    [Header("Recompensa Final")]
+    [Tooltip("Itens dropados ao amanhecer quando todas as cargas se esgotam.")]
+    [SerializeField] private SpawnReward[] rewards;
 
     #endregion
 
@@ -55,11 +67,13 @@ public class EnemySpawnPoint : MonoBehaviour
     private void OnEnable()
     {
         DayNightCycle.OnNightStarted += HandleNightStarted;
+        DayNightCycle.OnDayStarted   += HandleDayStarted;
     }
 
     private void OnDisable()
     {
         DayNightCycle.OnNightStarted -= HandleNightStarted;
+        DayNightCycle.OnDayStarted   -= HandleDayStarted;
     }
 
     #endregion
@@ -71,6 +85,27 @@ public class EnemySpawnPoint : MonoBehaviour
     {
         if (IsExhausted || _isSpawning || enemyPrefab == null) return;
         StartCoroutine(SpawnRoutine());
+    }
+
+    private void HandleDayStarted()
+    {
+        if (!IsExhausted) return;
+        DropRewards();
+        Destroy(gameObject);
+    }
+
+    private void DropRewards()
+    {
+        if (rewards == null) return;
+        foreach (SpawnReward reward in rewards)
+        {
+            if (reward.prefab == null) continue;
+            for (int i = 0; i < reward.amount; i++)
+            {
+                Vector2 offset = Random.insideUnitCircle * 0.5f;
+                Instantiate(reward.prefab, (Vector2)transform.position + offset, Quaternion.identity);
+            }
+        }
     }
 
     private IEnumerator SpawnRoutine()

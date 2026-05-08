@@ -1,37 +1,45 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class BuildingUI : MonoBehaviour
 {
     // ─────────────────────────────────────────
-    #region Referências
+    #region Configuração
 
-    [Header("Root")]
+    [Header("Root Canvas (Slider)")]
     [SerializeField] private GameObject root;
-
-    [Header("Textos")]
-    [SerializeField] private TextMeshProUGUI costText;
-    [SerializeField] private TextMeshProUGUI progressText;
 
     [Header("Barra de Progresso")]
     [SerializeField] private Slider slider;
 
     [Header("Cores da Barra")]
-    [SerializeField] private Color colorStart = new Color(0.2f, 0.6f, 1f);
+    [SerializeField] private Color colorStart    = new Color(0.2f, 0.6f, 1f);
     [SerializeField] private Color colorComplete = new Color(0.2f, 0.9f, 0.3f);
+
+    [Header("Ícones de Custo (world-space)")]
+    [Tooltip("Transform pai dos ícones — deve ser um filho direto da construção, fora do Canvas. Se nulo, é criado automaticamente.")]
+    [SerializeField] private Transform iconRoot;
+    [SerializeField] private Vector3   iconOffset       = new Vector3(0f, 1.2f, 0f);
+    [SerializeField] private float     iconSpacing      = 0.35f;
+    [SerializeField] private float     iconScale        = 0.3f;
+    [SerializeField] private string    iconSortingLayer = "Dynamic";
+    [SerializeField] private int       iconSortingOrder = 8;
+    [SerializeField] private Color     emptyColor       = new Color(1f, 1f, 1f, 0.22f);
+    [SerializeField] private Color     filledColor      = Color.white;
 
     #endregion
 
     // ─────────────────────────────────────────
     #region Estado
 
-    private bool _isRunning = false;
-    private float _duration = 0f;
-    private float _elapsed = 0f;
-
-    // Referência à imagem de fill do Slider para mudar a cor
+    private bool  _isRunning;
+    private float _duration;
+    private float _elapsed;
     private Image _fillImage;
+
+    private SpriteRenderer[] _slots;
+    private Sprite           _builtIcon;
+    private int              _builtCount;
 
     #endregion
 
@@ -40,18 +48,27 @@ public class BuildingUI : MonoBehaviour
 
     private void Awake()
     {
-        // Configura o Slider
+        if (iconRoot == null)
+        {
+            Building building = GetComponentInParent<Building>();
+            Transform parent  = building != null ? building.transform : transform.parent ?? transform;
+            var go = new GameObject("IconRoot");
+            go.transform.SetParent(parent);
+            go.transform.localPosition = Vector3.zero;
+            go.transform.localScale    = Vector3.one;
+            iconRoot = go.transform;
+        }
+
         if (slider != null)
         {
-            slider.minValue = 0f;
-            slider.maxValue = 1f;
-            slider.value = 0f;
-            slider.interactable = false;  // não é interagível pelo jogador
-
-            // Pega a imagem de fill para controlar a cor
+            slider.minValue    = 0f;
+            slider.maxValue    = 1f;
+            slider.value       = 0f;
+            slider.interactable = false;
             _fillImage = slider.fillRect?.GetComponent<Image>();
         }
 
+        ShowRoot(false);
         SetSliderVisible(false);
     }
 
@@ -60,7 +77,6 @@ public class BuildingUI : MonoBehaviour
         if (!_isRunning) return;
 
         _elapsed += Time.deltaTime;
-
         float progress = Mathf.Clamp01(_elapsed / _duration);
         UpdateSlider(progress);
 
@@ -71,41 +87,57 @@ public class BuildingUI : MonoBehaviour
     #endregion
 
     // ─────────────────────────────────────────
-    #region Refresh — textos de custo
+    #region Refresh
 
     public void Refresh(Building building)
     {
-        if (building.State == BuildingState.UnderConstruction)
+        switch (building.State)
         {
-            root?.SetActive(true);
-            SetTextsVisible(false);
-            return;
-        }
+            case BuildingState.UnderConstruction:
+                ShowRoot(true);
+                ClearIconSlots();
+                return;
 
-        if (building.Data?.nextLevel == null)
-        {
-            root?.SetActive(false);
-            SetSliderVisible(false);
-            return;
-        }
+            case BuildingState.WaitingBuilder:
+                ShowRoot(false);
+                ClearIconSlots();
+                return;
 
-        root?.SetActive(true);
-        SetTextsVisible(true);
-        SetSliderVisible(false);
+            case BuildingState.Destroyed:
+            case BuildingState.WaitingFunds:
+                ShowRoot(false);
+                BuildIconSlots(building.Data?.coinIcon, building.TargetCost);
+                SetFilled(building.CoinsInvested);
+                return;
 
-        int cost = building.Data.nextLevel.coinCost;
-        int invested = building.CoinsInvested;
-        int remaining = building.CoinsRemaining;
+            case BuildingState.Built:
+            {
+                bool isDamaged  = !building.IsAtFullHealth;
+                bool canUpgrade = building.HasNextLevel && building.IsAtFullHealth;
 
-        if (invested <= 0)
-        {
-            if (costText) costText.text = $"{cost} moedas";
-            if (progressText) progressText.text = "";
-        }
-        else
-        {
-            if (costText) costText.text = $"{remaining} restantes";
-            if (progressText) progressText.text = $"{invested}/{cost}";
+                if (isDamaged)
+                {
+                    ShowRoot(false);
+                    BuildIconSlots(building.Data?.coinIcon, building.Data.RepairCost);
+                    SetFilled(building.CoinsInvested);
+                    return;
+                }
+                if (canUpgrade)
+                {
+                    ShowRoot(false);
+                    BuildIconSlots(building.Data?.coinIcon, building.Data.nextLevel.coinCost);
+                    SetFilled(building.CoinsInvested);
+                    return;
+                }
+                ShowRoot(false);
+                ClearIconSlots();
+                return;
+            }
+
+            default:
+                ShowRoot(false);
+                ClearIconSlots();
+                return;
         }
     }
 
@@ -116,11 +148,12 @@ public class BuildingUI : MonoBehaviour
 
     public void StartProgress(float duration)
     {
-        _duration = duration;
-        _elapsed = 0f;
+        _duration  = duration;
+        _elapsed   = 0f;
         _isRunning = true;
 
-        SetTextsVisible(false);
+        ClearIconSlots();
+        ShowRoot(true);
         SetSliderVisible(true);
         UpdateSlider(0f);
     }
@@ -131,12 +164,18 @@ public class BuildingUI : MonoBehaviour
         SetSliderVisible(false);
     }
 
+    public void UpdateProgressManual(float progress)
+    {
+        if (slider == null) return;
+        slider.value = Mathf.Clamp01(progress);
+        if (_fillImage != null)
+            _fillImage.color = Color.Lerp(colorStart, colorComplete, progress);
+    }
+
     private void UpdateSlider(float progress)
     {
         if (slider == null) return;
-
         slider.value = progress;
-
         if (_fillImage != null)
             _fillImage.color = Color.Lerp(colorStart, colorComplete, progress);
     }
@@ -156,29 +195,75 @@ public class BuildingUI : MonoBehaviour
     #endregion
 
     // ─────────────────────────────────────────
+    #region Ícones de Custo
+
+    private void BuildIconSlots(Sprite icon, int count)
+    {
+        if (icon == _builtIcon && count == _builtCount && _slots != null) return;
+
+        _builtIcon  = icon;
+        _builtCount = count;
+        ClearIconSlots();
+
+        if (icon == null || count <= 0 || iconRoot == null) return;
+
+        _slots = new SpriteRenderer[count];
+        float   totalWidth = (count - 1) * iconSpacing;
+        Vector3 startLocal = iconOffset + Vector3.left * (totalWidth * 0.5f);
+
+        for (int i = 0; i < count; i++)
+        {
+            GameObject go = new GameObject("Slot_" + i);
+            go.transform.SetParent(iconRoot);
+            go.transform.localPosition = startLocal + Vector3.right * i * iconSpacing;
+            go.transform.localScale    = Vector3.one * iconScale;
+
+            SpriteRenderer sr   = go.AddComponent<SpriteRenderer>();
+            sr.sprite           = icon;
+            sr.color            = emptyColor;
+            sr.sortingLayerName = iconSortingLayer;
+            sr.sortingOrder     = iconSortingOrder;
+
+            _slots[i] = sr;
+        }
+    }
+
+    public void SetFilled(int count)
+    {
+        if (_slots == null) return;
+        for (int i = 0; i < _slots.Length; i++)
+        {
+            if (_slots[i] == null) continue;
+            _slots[i].color = i < count ? filledColor : emptyColor;
+        }
+    }
+
+    private void ClearIconSlots()
+    {
+        if (iconRoot != null)
+        {
+            foreach (Transform child in iconRoot)
+                Destroy(child.gameObject);
+        }
+        _slots      = null;
+        _builtIcon  = null;
+        _builtCount = 0;
+    }
+
+    #endregion
+
+    // ─────────────────────────────────────────
     #region Helpers
+
+    private void ShowRoot(bool visible)
+    {
+        if (root != null) root.SetActive(visible);
+    }
 
     private void SetSliderVisible(bool visible)
     {
         if (slider != null)
             slider.gameObject.SetActive(visible);
-    }
-
-    private void SetTextsVisible(bool visible)
-    {
-        if (costText) costText.gameObject.SetActive(visible);
-        if (progressText) progressText.gameObject.SetActive(visible);
-    }
-
-    /// <summary>
-    /// Atualiza a barra manualmente (0 a 1) — usado pelo BuildRoutine com múltiplos BOTs.
-    /// </summary>
-    public void UpdateProgressManual(float progress)
-    {
-        if (slider == null) return;
-        slider.value = Mathf.Clamp01(progress);
-        if (_fillImage != null)
-            _fillImage.color = Color.Lerp(colorStart, colorComplete, progress);
     }
 
     #endregion

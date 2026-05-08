@@ -26,9 +26,13 @@ public class DefenderBotBrain : MonoBehaviour
     [SerializeField] private float attackCooldown  = 1.2f;
 
     [Header("Patrulha")]
-    [SerializeField] private float patrolRadius = 6f;
-    [SerializeField] private float idleTimeMin  = 1f;
-    [SerializeField] private float idleTimeMax  = 2.5f;
+    [SerializeField] private float patrolRadius      = 6f;
+    [Tooltip("Distância mínima do ponto de patrulha (evita ponto muito próximo).")]
+    [SerializeField] private float patrolMinDistance = 2f;
+    [Tooltip("Tempo máximo tentando chegar a um ponto de patrulha antes de desistir.")]
+    [SerializeField] private float patrolTimeout     = 6f;
+    [SerializeField] private float idleTimeMin       = 1f;
+    [SerializeField] private float idleTimeMax       = 3f;
 
     #endregion
 
@@ -38,6 +42,7 @@ public class DefenderBotBrain : MonoBehaviour
     private EnemyMovement      _movement;
     private DefenderBotHealth  _health;
     private IAttack            _attack;
+    private DefenderBotAnimator _animator;
 
     #endregion
 
@@ -62,6 +67,7 @@ public class DefenderBotBrain : MonoBehaviour
         _movement = GetComponent<EnemyMovement>();
         _health   = GetComponent<DefenderBotHealth>();
         _attack   = GetComponent<IAttack>();
+        _animator = GetComponent<DefenderBotAnimator>();
     }
 
     private void Start()
@@ -72,6 +78,12 @@ public class DefenderBotBrain : MonoBehaviour
         _health.OnDeath += HandleDeath;
 
         EnterState(EnemyState.Patrulhando);
+    }
+
+    private void Update()
+    {
+        if (_state != EnemyState.Morto && _health != null && _health.IsDead)
+            HandleDeath();
     }
 
     #endregion
@@ -116,10 +128,17 @@ public class DefenderBotBrain : MonoBehaviour
 
     private IEnumerator PatrolRoutine()
     {
-        _movement.MoveTo(_homePosition + Random.insideUnitCircle * patrolRadius);
+        _movement.MoveTo(GetPatrolPoint());
+
+        float elapsed = 0f;
 
         while (!_movement.HasArrived)
         {
+            elapsed += 0.2f;
+
+            // Timeout: desiste e vai pro Idle se não conseguir chegar
+            if (elapsed >= patrolTimeout) break;
+
             Transform enemy = FindNearestEnemy();
             if (enemy != null)
             {
@@ -127,10 +146,23 @@ public class DefenderBotBrain : MonoBehaviour
                 EnterState(EnemyState.Perseguindo);
                 yield break;
             }
+
             yield return new WaitForSeconds(0.2f);
         }
 
+        _movement.Stop();
         EnterState(EnemyState.Idle);
+    }
+
+    /// <summary>
+    /// Sorteia um ponto de patrulha sempre entre patrolMinDistance e patrolRadius,
+    /// garantindo que o bot realmente ande e não fique parado.
+    /// </summary>
+    private Vector2 GetPatrolPoint()
+    {
+        Vector2 dir    = Random.insideUnitCircle.normalized;   // direção aleatória (nunca zero)
+        float   radius = Random.Range(patrolMinDistance, patrolRadius);
+        return _homePosition + dir * radius;
     }
 
     #endregion
@@ -190,6 +222,7 @@ public class DefenderBotBrain : MonoBehaviour
                 yield break;
             }
 
+            _animator?.PlayAttackAnimation(_currentTarget.position);
             _attack?.PerformAttack(_currentTarget, attackDamage);
             yield return new WaitForSeconds(attackCooldown);
         }
@@ -207,7 +240,8 @@ public class DefenderBotBrain : MonoBehaviour
 
     private IEnumerator DeathRoutine()
     {
-        _movement.Stop();
+        _movement.Freeze();
+        _animator?.PlayDeathAnimation();
         yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
     }

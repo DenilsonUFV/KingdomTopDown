@@ -1,8 +1,8 @@
 public enum BuildingState
 {
-    Slot,           // espaço vazio disponível
-    WaitingFunds,   // aguardando moedas (parcialmente financiado)
-    WaitingBuilder, // financiado, aguardando BOT construtor
-    UnderConstruction, // BOT construindo
-    Built           // construção completa
+    Destroyed,          // HP = 0 ou nunca construÃ­da â€” precisa ser (re)construÃ­da
+    WaitingFunds,       // recebendo moedas para construir ou reparar
+    WaitingBuilder,     // financiada, aguardando BOT construtor
+    UnderConstruction,  // BOT trabalhando (construÃ§Ã£o ou reparo)
+    Built               // operacional
 }

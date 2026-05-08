@@ -30,10 +30,12 @@ public class EnemyMeleeAttack : MonoBehaviour, IAttack
 
         dmg.TakeDamage(damage);
 
+        HitFeedback feedback = target.GetComponent<HitFeedback>()
+                            ?? target.GetComponentInParent<HitFeedback>();
+        feedback?.ApplyHit(transform.position);
+
         if (hitEffectPrefab != null)
             Instantiate(hitEffectPrefab, target.position, Quaternion.identity);
-
-        Debug.Log($"[EnemyMelee] {gameObject.name} golpeou {target.name} por {damage}.");
     }
 
     #endregion

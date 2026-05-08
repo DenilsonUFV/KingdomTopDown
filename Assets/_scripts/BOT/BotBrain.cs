@@ -57,7 +57,9 @@ public class BotBrain : MonoBehaviour
     private void Start()
     {
         BotManager.Instance?.Register(this);
-        EnterState(BotState.Wandering);
+        if (_targetBuilding == null &&
+            (BotManager.Instance == null || !BotManager.Instance.TryAssignToPendingBuilding(this)))
+            EnterState(BotState.Wandering);
     }
 
     private void OnDestroy()
@@ -232,7 +234,7 @@ public class BotBrain : MonoBehaviour
             _pendingBuilding = null;
             EnterState(BotState.GoingToBuild);
         }
-        else
+        else if (BotManager.Instance == null || !BotManager.Instance.TryAssignToPendingBuilding(this))
         {
             EnterState(BotState.Wandering);
         }
@@ -297,7 +299,7 @@ public class BotBrain : MonoBehaviour
             _pendingBuilding = null;
             EnterState(BotState.GoingToBuild);
         }
-        else
+        else if (BotManager.Instance == null || !BotManager.Instance.TryAssignToPendingBuilding(this))
         {
             EnterState(BotState.Wandering);
         }

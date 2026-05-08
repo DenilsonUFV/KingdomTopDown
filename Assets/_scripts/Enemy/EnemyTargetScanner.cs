@@ -84,11 +84,13 @@ public class EnemyTargetScanner : MonoBehaviour
 
     private TargetType? ClassifyTarget(GameObject go)
     {
-        // GetComponentInParent sobe a hierarquia — cobre o caso do collider estar em filho do root
-        if (go.GetComponentInParent<PlayerController>() != null) return TargetType.Jogador;
-        if (go.GetComponentInParent<DefenderBotBrain>() != null) return TargetType.BotDefensor;
-        if (go.GetComponentInParent<BotBrain>()         != null) return TargetType.BotConstrutor;
-        if (go.GetComponentInParent<BuildingHealth>()   != null) return TargetType.Construcao;
+        // GetComponentInParent sobe a hierarquia — cobre o caso do collider estar em filho do root.
+        // DefenderBotHealth serve de fallback caso DefenderBotBrain não esteja no prefab ainda.
+        if (go.GetComponentInParent<PlayerController>()  != null) return TargetType.Jogador;
+        if (go.GetComponentInParent<DefenderBotBrain>()  != null) return TargetType.BotDefensor;
+        if (go.GetComponentInParent<DefenderBotHealth>() != null) return TargetType.BotDefensor;
+        if (go.GetComponentInParent<BotBrain>()          != null) return TargetType.BotConstrutor;
+        if (go.GetComponentInParent<BuildingHealth>()    != null) return TargetType.Construcao;
         return null;
     }
 
