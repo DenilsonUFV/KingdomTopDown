@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 014478a781a819f41ae50ddd30a60268, type: 3}
-  m_Name: CrystalPillar_BOTDefensor_Archer
+  m_Name: CrystalPillar_MiniTower
   m_EditorClassIdentifier: Assembly-CSharp::CrystalPillarData
   pillarName: Pilar de Cristal
-  botType: 2
+  spawnPrefab: {fileID: 7655283735648257126, guid: c1caf01542a53b640b3e0fb08a7c1d0b, type: 3}
   resourceType: 1
-  resourceCost: 2
+  resourceCost: 1
   resourceIcon: {fileID: 6122375279105785291, guid: d9b3b2de5519f6f48b0781a793b5c703, type: 3}
   spawnDelay: 2
   spawnCooldown: 5

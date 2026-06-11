@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 014478a781a819f41ae50ddd30a60268, type: 3}
-  m_Name: CrystalPillar_BOTConstrutor
+  m_Name: CrystalPillar_BOTDefensor_Melee
   m_EditorClassIdentifier: Assembly-CSharp::CrystalPillarData
   pillarName: Pilar de Cristal
-  botType: 0
-  resourceType: 0
+  spawnPrefab: {fileID: 3631276584804972899, guid: 8ba4a6341d495184b9c81d4105cfc9d6, type: 3}
+  resourceType: 2
   resourceCost: 2
-  resourceIcon: {fileID: 21300000, guid: 86fe447bb387fa54bb28dec57c664da0, type: 3}
+  resourceIcon: {fileID: -2947952368574039225, guid: d9b3b2de5519f6f48b0781a793b5c703, type: 3}
   spawnDelay: 2
   spawnCooldown: 5
-  refundPrefab: {fileID: 5761243535731525573, guid: 469316711563943408e54973be50bb8a, type: 3}
+  refundPrefab: {fileID: 3559971333997045095, guid: 0ee88cb0692744341b55e7900d023fce, type: 3}

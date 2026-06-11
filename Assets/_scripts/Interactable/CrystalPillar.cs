@@ -200,14 +200,11 @@ public class CrystalPillar : MonoBehaviour, IInteractable
         _ui?.SetFilled(0);
         _ui?.SetVisible(false);
 
-        Vector3 spawnPos = transform.position;
-        if (data.botType == BotType.Builder)
-            BotSpawner.Instance?.SpawnBuilderBot(spawnPos);
-        else if(data.botType == BotType.Defender)
-            BotSpawner.Instance?.SpawnDefenderBot(spawnPos);
-        else if(data.botType == BotType.DefenderArcher)            
-            BotSpawner.Instance?.SpawnDefenderArcherBot(spawnPos);
-
+        if (data.spawnPrefab != null){
+            Debug.Log("PRE INSTANCIADO");
+            Instantiate(data.spawnPrefab, transform.position, Quaternion.identity);
+            Debug.Log("POS INSTANCIADO");
+        }
         if (_cooldownRoutine != null) StopCoroutine(_cooldownRoutine);
         _cooldownRoutine = StartCoroutine(CooldownRoutine());
     }

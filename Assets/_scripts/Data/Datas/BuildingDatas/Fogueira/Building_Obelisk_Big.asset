@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec5fa9a4917749d46afdd4819f1269fd, type: 3}
-  m_Name: Building_Casa
+  m_Name: Building_Obelisk_Big
   m_EditorClassIdentifier: Assembly-CSharp::BuildingData
-  buildingName: Casa
-  spriteBuilt: {fileID: -1309427334820629646, guid: 72cc2b197d074cc40a5e54e05d33497a, type: 3}
-  spriteBuilding: {fileID: -1309427334820629646, guid: 72cc2b197d074cc40a5e54e05d33497a, type: 3}
+  buildingName: Big Obelisk
+  spriteBuilt: {fileID: -2779840504529536171, guid: ff754b402c2337249a5e5e2e43717cfb, type: 3}
+  spriteBuilding: {fileID: -2779840504529536171, guid: ff754b402c2337249a5e5e2e43717cfb, type: 3}
   spriteSlot: {fileID: 6232825715084013417, guid: 4d837276e2040454aacf8bf3041eac68, type: 3}
   coinIcon: {fileID: 21300000, guid: 86fe447bb387fa54bb28dec57c664da0, type: 3}
   coinCost: 5

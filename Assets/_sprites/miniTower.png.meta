@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 17fa410fe89e13c46a5ec5b5be660358
+guid: 5466f525d6e08e342babbc4fddcb5f00
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -825901872512693276
-    second: Pavement_Tiles_0
-  - first:
-      213: -1801623838221342168
-    second: Pavement_Tiles_1
-  - first:
-      213: -1971709572591764014
-    second: Pavement_Tiles_2
-  - first:
-      213: -4942282889343212914
-    second: Pavement_Tiles_3
+      213: 6910940997440529531
+    second: miniTower_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,13 +46,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.0369239}
   spritePixelsToUnits: 16
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 2, y: 1, z: 2, w: 32}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -109,89 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pavement_Tiles_0
+      name: miniTower_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 95
-        width: 33
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4eb0d8d6f9ec984f0800000000000000
-      internalID: -825901872512693276
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pavement_Tiles_1
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 89
+        y: 0
         width: 28
-        height: 30
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 82ae0ff1aa85ff6e0800000000000000
-      internalID: -1801623838221342168
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pavement_Tiles_2
-      rect:
-        serializedVersion: 2
-        x: 79
-        y: 95
-        width: 34
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2dd3e6d179413a4e0800000000000000
-      internalID: -1971709572591764014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pavement_Tiles_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 15
-        width: 97
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e82e431c5eb796bb0800000000000000
-      internalID: -4942282889343212914
+      spriteID: b746020b83898ef50800000000000000
+      internalID: 6910940997440529531
       vertices: []
       indices: 
       edges: []
@@ -200,8 +125,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
-    internalID: 0
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -210,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pavement_Tiles_0: -825901872512693276
-      Pavement_Tiles_1: -1801623838221342168
-      Pavement_Tiles_2: -1971709572591764014
-      Pavement_Tiles_3: -4942282889343212914
+      miniTower_0: 6910940997440529531
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

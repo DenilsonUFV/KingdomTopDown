@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014478a781a819f41ae50ddd30a60268, type: 3}
+  m_Name: CrystalPillar_BOTDefensor_Archer
+  m_EditorClassIdentifier: Assembly-CSharp::CrystalPillarData
+  pillarName: Pilar de Cristal
+  spawnPrefab: {fileID: 5946046483809742322, guid: e3cad1e3a9a7e684e9fda35e825157f7, type: 3}
+  resourceType: 1
+  resourceCost: 2
+  resourceIcon: {fileID: 6122375279105785291, guid: d9b3b2de5519f6f48b0781a793b5c703, type: 3}
+  spawnDelay: 2
+  spawnCooldown: 5
+  refundPrefab: {fileID: 8836216209841826220, guid: 27d5b98112209d442b96537df116dc26, type: 3}

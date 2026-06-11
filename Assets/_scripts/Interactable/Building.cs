@@ -47,6 +47,7 @@ public class Building : MonoBehaviour, IInteractable
     public event Action<Building>        OnFullyFunded;
     public event Action<Building>        OnBuilt;
     public static event Action<Building> OnAnyBuildingFullyFunded;
+    public static event Action<Building> OnAnyBuilt;
 
     #endregion
 
@@ -98,11 +99,9 @@ public class Building : MonoBehaviour, IInteractable
 
     protected virtual void Start()
     {
+        _state = startBuilt ? BuildingState.Built : BuildingState.Destroyed;
         RefreshVisual();
         _ui?.Refresh(this);
-
-        if(!startBuilt)
-            _state = BuildingState.Destroyed;
     }
 
     private void OnDestroy()
@@ -344,6 +343,7 @@ public class Building : MonoBehaviour, IInteractable
 
         _ui?.Refresh(this);
         OnBuilt?.Invoke(this);
+        OnAnyBuilt?.Invoke(this);
 
         if (currentData.buildingName == "Tenda")
             BotSpawner.Instance?.SpawnBuilderBot(transform.position);
@@ -392,8 +392,21 @@ public class Building : MonoBehaviour, IInteractable
 
     private void UpdatePolygonCollider()
     {
-        Destroy(GetComponent<PolygonCollider2D>());
-        gameObject.AddComponent<PolygonCollider2D>();
+        if (_sr?.sprite == null) return;
+
+        PolygonCollider2D col = GetComponent<PolygonCollider2D>();
+        if (col == null) col = gameObject.AddComponent<PolygonCollider2D>();
+
+        Sprite sprite = _sr.sprite;
+        col.pathCount = sprite.GetPhysicsShapeCount();
+
+        var path = new List<Vector2>();
+        for (int i = 0; i < col.pathCount; i++)
+        {
+            path.Clear();
+            sprite.GetPhysicsShape(i, path);
+            col.SetPath(i, path);
+        }
     }
 
     #endregion

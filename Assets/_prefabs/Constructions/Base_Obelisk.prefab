@@ -391,11 +391,10 @@ GameObject:
   - component: {fileID: 9069170892043561391}
   - component: {fileID: 8803456580243222517}
   - component: {fileID: 7561350951102927043}
-  - component: {fileID: 5580786558434682578}
   - component: {fileID: 7835722369624268262}
   - component: {fileID: 783578739498849161}
   m_Layer: 7
-  m_Name: Campfire_House
+  m_Name: Base_Obelisk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,7 +465,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3968539654459880187, guid: 26454de1e7717f34fa557fd8ef70eaf8, type: 3}
+  m_Sprite: {fileID: -8904190732776443752, guid: 8ccec39afb43ba44998df76c284e9adf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -554,19 +553,6 @@ MonoBehaviour:
   iconSortingOrder: 8
   emptyColor: {r: 1, g: 1, b: 1, a: 0.22}
   filledColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &5580786558434682578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5741635247075631247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68c532ac605ef1644bad3c80c58c95aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CoinSpawnHelper
-  coinPrefab: {fileID: 5761243535731525573, guid: 469316711563943408e54973be50bb8a, type: 3}
 --- !u!60 &7835722369624268262
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -604,8 +590,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1, y: 2}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.625, y: 1.5625}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

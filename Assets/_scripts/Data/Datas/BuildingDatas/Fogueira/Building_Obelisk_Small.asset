@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec5fa9a4917749d46afdd4819f1269fd, type: 3}
-  m_Name: Building_Fogueira
+  m_Name: Building_Obelisk_Small
   m_EditorClassIdentifier: Assembly-CSharp::BuildingData
-  buildingName: Fogueira
-  spriteBuilt: {fileID: -3968539654459880187, guid: 26454de1e7717f34fa557fd8ef70eaf8, type: 3}
-  spriteBuilding: {fileID: -2008683585229313245, guid: 26454de1e7717f34fa557fd8ef70eaf8, type: 3}
+  buildingName: 'Small Obelisk '
+  spriteBuilt: {fileID: 6766871770043534046, guid: 64543d3c7ea53f84c894c21c09833840, type: 3}
+  spriteBuilding: {fileID: 6766871770043534046, guid: 64543d3c7ea53f84c894c21c09833840, type: 3}
   spriteSlot: {fileID: 6232825715084013417, guid: 4d837276e2040454aacf8bf3041eac68, type: 3}
   coinIcon: {fileID: 21300000, guid: 86fe447bb387fa54bb28dec57c664da0, type: 3}
-  coinCost: 0
-  needsBuilder: 0
+  coinCost: 3
+  needsBuilder: 1
   buildTime: 3
-  nextLevel: {fileID: 11400000, guid: a7238465c722c3948bed73919bb32292, type: 2}
+  nextLevel: {fileID: 11400000, guid: 5c7bf50b4437d6d40ace0b24b287698b, type: 2}
   repairCostRatio: 0.5
   repairTimeRatio: 0.5

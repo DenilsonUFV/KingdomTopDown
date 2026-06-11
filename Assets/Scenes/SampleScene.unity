@@ -1201,6 +1201,7 @@ GameObject:
   - component: {fileID: 454275051}
   - component: {fileID: 454275052}
   - component: {fileID: 454275053}
+  - component: {fileID: 454275054}
   m_Layer: 0
   m_Name: Star
   m_TagString: Untagged
@@ -1320,6 +1321,7 @@ MonoBehaviour:
   offsetDistance: 1.4
   followSpeed: 2
   pickupRadius: 1
+  dropPickupDelay: 3
 --- !u!114 &454275052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1453,6 +1455,30 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &454275054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454275047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f713e383b70f84295b4f6ef68550c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StarFeedback
+  _resourcePickup:
+    scalePeak: 1.25
+    duration: 0.22
+    flashColor: {r: 1, g: 0.9, b: 0.2, a: 1}
+  _buildingFunded:
+    scalePeak: 1.4
+    duration: 0.3
+    flashColor: {r: 1, g: 0.75, b: 0, a: 1}
+  _buildingBuilt:
+    scalePeak: 1.65
+    duration: 0.45
+    flashColor: {r: 0.2, g: 1, b: 0.45, a: 1}
 --- !u!1 &475283600
 GameObject:
   m_ObjectHideFlags: 0
@@ -9627,7 +9653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb9bb960a1a0ed48827def867408643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DayNightCycle
-  dayDuration: 12
+  dayDuration: 120
   nightDuration: 30
   startAtDay: 1
   showDebugLog: 1
@@ -9965,7 +9991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1299510117
 Transform:
   m_ObjectHideFlags: 0
@@ -34020,6 +34046,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1288c3bc66b904c97b49807d9c44ef, type: 3}
+--- !u!1001 &4032228618727875388
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6264534197909780680, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264534197909780680, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264534197909780680, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264534197909780680, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264534197909780680, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264534197909780680, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264534197909780680, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264534197909780680, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264534197909780680, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264534197909780680, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848812786287176346, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
+      propertyPath: m_Name
+      value: Pillar_MiniTower
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
 --- !u!1001 &4688199575682287734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34139,7 +34222,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 5741635247075631247, guid: 995b5f4f323e12a40a0a8be46f605487, type: 3}
       propertyPath: m_Name
-      value: Campfire_House
+      value: Base_Obelisk
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34285,3 +34368,4 @@ SceneRoots:
   - {fileID: 8192058216454813794}
   - {fileID: 3209133026882214526}
   - {fileID: 674819166876331973}
+  - {fileID: 4032228618727875388}

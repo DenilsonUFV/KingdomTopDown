@@ -6,8 +6,9 @@ public class CrystalPillarData : ScriptableObject
     [Header("Identificação")]
     public string pillarName = "Pilar de Cristal";
 
-    [Header("BOT Invocado")]
-    public BotType botType = BotType.Defender;
+    [Header("Prefab Invocado")]
+    [Tooltip("Qualquer prefab: BOT, construção, item etc.")]
+    public GameObject spawnPrefab;
 
     [Header("Custo de Invocação")]
     public ResourceType resourceType = ResourceType.Coin;

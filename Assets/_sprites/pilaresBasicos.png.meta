@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 17fa410fe89e13c46a5ec5b5be660358
+guid: c77916176f8d6de4fbba2b02ae9375ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -825901872512693276
-    second: Pavement_Tiles_0
+      213: -1769845434126998443
+    second: pilaresBasicos_0
   - first:
-      213: -1801623838221342168
-    second: Pavement_Tiles_1
-  - first:
-      213: -1971709572591764014
-    second: Pavement_Tiles_2
-  - first:
-      213: -4942282889343212914
-    second: Pavement_Tiles_3
+      213: 7464965757631892756
+    second: pilaresBasicos_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,89 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pavement_Tiles_0
+      name: pilaresBasicos_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 95
-        width: 33
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1
+        y: 0
+        width: 15
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5, y: 0.080952846}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4eb0d8d6f9ec984f0800000000000000
-      internalID: -825901872512693276
+      spriteID: 554638764fe3077e0800000000000000
+      internalID: -1769845434126998443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pavement_Tiles_1
+      name: pilaresBasicos_1
       rect:
         serializedVersion: 2
-        x: 42
-        y: 89
-        width: 28
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 17
+        y: 0
+        width: 15
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5, y: 0.080952846}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 82ae0ff1aa85ff6e0800000000000000
-      internalID: -1801623838221342168
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pavement_Tiles_2
-      rect:
-        serializedVersion: 2
-        x: 79
-        y: 95
-        width: 34
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2dd3e6d179413a4e0800000000000000
-      internalID: -1971709572591764014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pavement_Tiles_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 15
-        width: 97
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e82e431c5eb796bb0800000000000000
-      internalID: -4942282889343212914
+      spriteID: 41d8a143ec2e89760800000000000000
+      internalID: 7464965757631892756
       vertices: []
       indices: 
       edges: []
@@ -200,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: eb7f9efaf5d45a842a3bf5542e4b5924
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pavement_Tiles_0: -825901872512693276
-      Pavement_Tiles_1: -1801623838221342168
-      Pavement_Tiles_2: -1971709572591764014
-      Pavement_Tiles_3: -4942282889343212914
+      pilaresBasicos_0: -1769845434126998443
+      pilaresBasicos_1: 7464965757631892756
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
