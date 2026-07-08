@@ -1806,7 +1806,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000679ba583317648ed1d041b3c
+  m_ApplyToSortingLayers: 00000000679ba583317648ed1d041b3c39fd0828
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -10559,6 +10559,71 @@ Transform:
   - {fileID: 321125951}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1474280838
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 230813322681775283, guid: c1caf01542a53b640b3e0fb08a7c1d0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.255178
+      objectReference: {fileID: 0}
+    - target: {fileID: 230813322681775283, guid: c1caf01542a53b640b3e0fb08a7c1d0b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 230813322681775283, guid: c1caf01542a53b640b3e0fb08a7c1d0b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 230813322681775283, guid: c1caf01542a53b640b3e0fb08a7c1d0b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 230813322681775283, guid: c1caf01542a53b640b3e0fb08a7c1d0b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 230813322681775283, guid: c1caf01542a53b640b3e0fb08a7c1d0b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 230813322681775283, guid: c1caf01542a53b640b3e0fb08a7c1d0b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 230813322681775283, guid: c1caf01542a53b640b3e0fb08a7c1d0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 230813322681775283, guid: c1caf01542a53b640b3e0fb08a7c1d0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 230813322681775283, guid: c1caf01542a53b640b3e0fb08a7c1d0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064719118255396054, guid: c1caf01542a53b640b3e0fb08a7c1d0b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064719118255396054, guid: c1caf01542a53b640b3e0fb08a7c1d0b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655283735648257126, guid: c1caf01542a53b640b3e0fb08a7c1d0b, type: 3}
+      propertyPath: m_Name
+      value: miniTower_base
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c1caf01542a53b640b3e0fb08a7c1d0b, type: 3}
 --- !u!1 &1489867487
 GameObject:
   m_ObjectHideFlags: 0
@@ -33700,6 +33765,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3019941588087840619, guid: c1f94ad039d92e446a21d2bd59756eb6, type: 3}
+      propertyPath: sortingLayer
+      value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311086020108778145, guid: c1f94ad039d92e446a21d2bd59756eb6, type: 3}
+      propertyPath: carryOffset.y
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6868872024324253801, guid: c1f94ad039d92e446a21d2bd59756eb6, type: 3}
       propertyPath: m_Name
       value: Pillar_BOT_Defesa_Archer
@@ -33997,6 +34070,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1471764053839680316, guid: 1d1288c3bc66b904c97b49807d9c44ef, type: 3}
+      propertyPath: carryOffset.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246075864302244822, guid: 1d1288c3bc66b904c97b49807d9c44ef, type: 3}
+      propertyPath: sortingLayer
+      value: UI
+      objectReference: {fileID: 0}
     - target: {fileID: 6377360084047778929, guid: 1d1288c3bc66b904c97b49807d9c44ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.54
@@ -34054,6 +34135,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1441074219251200568, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
+      propertyPath: sortingLayer
+      value: UI
+      objectReference: {fileID: 0}
     - target: {fileID: 6264534197909780680, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.96
@@ -34097,6 +34182,10 @@ PrefabInstance:
     - target: {fileID: 6848812786287176346, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
       propertyPath: m_Name
       value: Pillar_MiniTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683697838577052461, guid: ec6552e609be7224b8acddc49da1f347, type: 3}
+      propertyPath: carryOffset.y
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34298,6 +34387,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2007042220433697101, guid: ff5b5530955d9aa4094a91e777e646d4, type: 3}
+      propertyPath: sortingLayer
+      value: UI
+      objectReference: {fileID: 0}
     - target: {fileID: 2524203592360124705, guid: ff5b5530955d9aa4094a91e777e646d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.04
@@ -34338,6 +34431,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5938071888010274962, guid: ff5b5530955d9aa4094a91e777e646d4, type: 3}
+      propertyPath: carryOffset.y
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7138952896137818688, guid: ff5b5530955d9aa4094a91e777e646d4, type: 3}
       propertyPath: m_Name
       value: Pillar_BOT_Construcao
@@ -34369,3 +34466,4 @@ SceneRoots:
   - {fileID: 3209133026882214526}
   - {fileID: 674819166876331973}
   - {fileID: 4032228618727875388}
+  - {fileID: 1474280838}

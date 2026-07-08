@@ -137,6 +137,37 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &2093480493181313769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 477153521320629285}
+  m_Layer: 7
+  m_Name: MountPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &477153521320629285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093480493181313769}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.84, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 230813322681775283}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3622908185330829402
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,11 +680,12 @@ GameObject:
   m_Component:
   - component: {fileID: 230813322681775283}
   - component: {fileID: 8745716459080510833}
-  - component: {fileID: 4776979742965707602}
   - component: {fileID: 5178317180150732261}
   - component: {fileID: 149021318175650474}
   - component: {fileID: 4756863741245825798}
   - component: {fileID: 3210063802496877468}
+  - component: {fileID: -4466162276590724880}
+  - component: {fileID: 6623987018166742043}
   m_Layer: 7
   m_Name: miniTower_base
   m_TagString: Untagged
@@ -675,6 +707,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7589791845742639806}
+  - {fileID: 477153521320629285}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8745716459080510833
@@ -736,20 +769,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &4776979742965707602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7655283735648257126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a918493f7ec02f4eb09a043a56bc7a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::YSortingStatic
-  yOffset: 0
-  sortingPrecision: 100
 --- !u!114 &5178317180150732261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -857,6 +876,33 @@ PolygonCollider2D:
       - {x: 0.78125, y: 1.1436529}
       - {x: -0.40625, y: 1.1436529}
   m_UseDelaunayMesh: 1
+--- !u!114 &-4466162276590724880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7655283735648257126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07b03e261a9423d4f8fd771eeda70699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YSorting
+  yOffset: 0
+  sortingPrecision: 1000
+--- !u!114 &6623987018166742043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7655283735648257126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f12b38f870b324993814ed62e43f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotMountPoint
+  mountTransform: {fileID: 477153521320629285}
 --- !u!1 &8641146567226227724
 GameObject:
   m_ObjectHideFlags: 0

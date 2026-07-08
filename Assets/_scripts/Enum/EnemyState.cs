@@ -10,5 +10,7 @@ public enum EnemyState
     Recuando,           // Voltando ao ponto de spawn (amanheceu)
     BuscandoEstrela,    // Indo pegar a Estrela caída no chão
     CarregandoEstrela,  // Carregando a Estrela de volta ao SpawnPoint
+    IndoParaBase,       // BOT se deslocando para ocupar um BotMountPoint
+    Montado,            // BOT fixo em um BotMountPoint, apenas atirando
     Morto               // Morto — aguardando destruição
 }

@@ -4,14 +4,18 @@ using UnityEngine;
 /// <summary>
 /// Máquina de estados do BOT defensor (melee ou arqueiro).
 ///
-/// Fluxo:
+/// Fluxo normal:
 ///   Patrulhando → (detecta inimigo) → Perseguindo → (entra em range) → Atacando
 ///   Atacando → (inimigo morreu/fugiu) → Patrulhando
-///   Qualquer estado → (vida = 0) → Morto
 ///
-/// Componentes obrigatórios no mesmo GameObject:
-///   EnemyMovement, DefenderBotHealth
-///   + UM dos: DefenderBotMeleeAttack ou DefenderBotArcherAttack (implementam IAttack)
+/// Fluxo de encaixe em torre (DefenderArcher + BotMountPoint):
+///   Patrulhando/Idle → (BotMountPoint.OnBecameAvailable) → IndoParaBase → Montado
+///   Montado → (torre destruída) → Patrulhando  (via Dismount())
+///
+/// Quando Montado:
+///   - Colliders desabilitados → inimigos não detectam o BOT via Physics2D
+///   - Movimento travado na posição do encaixe
+///   - Apenas atira nos inimigos dentro do raio de detecção
 /// </summary>
 public class DefenderBotBrain : MonoBehaviour
 {
@@ -34,25 +38,32 @@ public class DefenderBotBrain : MonoBehaviour
     [SerializeField] private float idleTimeMin       = 1f;
     [SerializeField] private float idleTimeMax       = 3f;
 
+    [Header("Encaixe em Construção")]
+    [Tooltip("Distância do ponto de encaixe para considerar chegada.")]
+    [SerializeField] private float mountArrivalThreshold = 0.5f;
+
     #endregion
 
     // ─────────────────────────────────────────
     #region Referências
 
-    private EnemyMovement      _movement;
-    private DefenderBotHealth  _health;
-    private IAttack            _attack;
+    private EnemyMovement       _movement;
+    private DefenderBotHealth   _health;
+    private IAttack             _attack;
     private DefenderBotAnimator _animator;
+    private Collider2D[]        _colliders;
+    private SpriteRenderer[]    _renderers;
 
     #endregion
 
     // ─────────────────────────────────────────
     #region Estado
 
-    private EnemyState  _state;
-    private Transform   _currentTarget;
-    private Coroutine   _stateRoutine;
-    private Vector2     _homePosition;
+    private EnemyState    _state;
+    private Transform     _currentTarget;
+    private Coroutine     _stateRoutine;
+    private Vector2       _homePosition;
+    private BotMountPoint _mountPoint;
 
     public EnemyState State  => _state;
     public bool       IsDead => _state == EnemyState.Morto;
@@ -64,20 +75,32 @@ public class DefenderBotBrain : MonoBehaviour
 
     private void Awake()
     {
-        _movement = GetComponent<EnemyMovement>();
-        _health   = GetComponent<DefenderBotHealth>();
-        _attack   = GetComponent<IAttack>();
-        _animator = GetComponent<DefenderBotAnimator>();
+        _movement  = GetComponent<EnemyMovement>();
+        _health    = GetComponent<DefenderBotHealth>();
+        _attack    = GetComponent<IAttack>();
+        _animator  = GetComponent<DefenderBotAnimator>();
+        _colliders = GetComponents<Collider2D>();
+        _renderers = GetComponentsInChildren<SpriteRenderer>();
     }
 
     private void Start()
     {
         _homePosition = transform.position;
-
         _movement.Init(moveSpeed);
         _health.OnDeath += HandleDeath;
 
-        EnterState(EnemyState.Patrulhando);
+        if (!TrySeekNearestMount())
+            EnterState(EnemyState.Patrulhando);
+    }
+
+    private void OnEnable()
+    {
+        BotMountPoint.OnBecameAvailable += HandleMountAvailable;
+    }
+
+    private void OnDisable()
+    {
+        BotMountPoint.OnBecameAvailable -= HandleMountAvailable;
     }
 
     private void Update()
@@ -100,12 +123,14 @@ public class DefenderBotBrain : MonoBehaviour
 
         _stateRoutine = newState switch
         {
-            EnemyState.Idle        => StartCoroutine(IdleRoutine()),
-            EnemyState.Patrulhando => StartCoroutine(PatrolRoutine()),
-            EnemyState.Perseguindo => StartCoroutine(ChaseRoutine()),
-            EnemyState.Atacando    => StartCoroutine(AttackRoutine()),
-            EnemyState.Morto       => StartCoroutine(DeathRoutine()),
-            _ => null
+            EnemyState.Idle         => StartCoroutine(IdleRoutine()),
+            EnemyState.Patrulhando  => StartCoroutine(PatrolRoutine()),
+            EnemyState.Perseguindo  => StartCoroutine(ChaseRoutine()),
+            EnemyState.Atacando     => StartCoroutine(AttackRoutine()),
+            EnemyState.IndoParaBase => StartCoroutine(GoToMountRoutine()),
+            EnemyState.Montado      => StartCoroutine(MountedRoutine()),
+            EnemyState.Morto        => StartCoroutine(DeathRoutine()),
+            _                       => null
         };
     }
 
@@ -129,14 +154,11 @@ public class DefenderBotBrain : MonoBehaviour
     private IEnumerator PatrolRoutine()
     {
         _movement.MoveTo(GetPatrolPoint());
-
         float elapsed = 0f;
 
         while (!_movement.HasArrived)
         {
             elapsed += 0.2f;
-
-            // Timeout: desiste e vai pro Idle se não conseguir chegar
             if (elapsed >= patrolTimeout) break;
 
             Transform enemy = FindNearestEnemy();
@@ -154,13 +176,9 @@ public class DefenderBotBrain : MonoBehaviour
         EnterState(EnemyState.Idle);
     }
 
-    /// <summary>
-    /// Sorteia um ponto de patrulha sempre entre patrolMinDistance e patrolRadius,
-    /// garantindo que o bot realmente ande e não fique parado.
-    /// </summary>
     private Vector2 GetPatrolPoint()
     {
-        Vector2 dir    = Random.insideUnitCircle.normalized;   // direção aleatória (nunca zero)
+        Vector2 dir    = Random.insideUnitCircle.normalized;
         float   radius = Random.Range(patrolMinDistance, patrolRadius);
         return _homePosition + dir * radius;
     }
@@ -174,7 +192,6 @@ public class DefenderBotBrain : MonoBehaviour
     {
         while (true)
         {
-            // Reavalia o alvo mais próximo a cada tick
             Transform newTarget = FindNearestEnemy();
             if (newTarget != null) _currentTarget = newTarget;
 
@@ -231,10 +248,143 @@ public class DefenderBotBrain : MonoBehaviour
     #endregion
 
     // ─────────────────────────────────────────
+    #region Encaixe em Construção
+
+    private bool TrySeekNearestMount()
+    {
+        BotMountPoint[] all     = FindObjectsByType<BotMountPoint>(FindObjectsSortMode.None);
+        BotMountPoint   nearest = null;
+        float           bestDist = float.MaxValue;
+
+        foreach (BotMountPoint mount in all)
+        {
+            if (!mount.IsAvailable) continue;
+            float dist = Vector2.Distance(transform.position, mount.MountWorldPosition);
+            if (dist < bestDist) { bestDist = dist; nearest = mount; }
+        }
+
+        if (nearest == null) return false;
+        _mountPoint = nearest;
+        EnterState(EnemyState.IndoParaBase);
+        return true;
+    }
+
+    private void HandleMountAvailable(BotMountPoint mount)
+    {
+        // Responde apenas se estiver livre e sem destino de mount já definido
+        if (_state != EnemyState.Patrulhando && _state != EnemyState.Idle) return;
+        if (_mountPoint != null) return;
+
+        _mountPoint = mount;
+        EnterState(EnemyState.IndoParaBase);
+    }
+
+    private IEnumerator GoToMountRoutine()
+    {
+        if (_mountPoint == null || !_mountPoint.IsAvailable)
+        {
+            _mountPoint = null;
+            EnterState(EnemyState.Patrulhando);
+            yield break;
+        }
+
+        while (true)
+        {
+            // Mount ficou indisponível enquanto caminhava (outro BOT chegou primeiro)
+            if (_mountPoint == null || !_mountPoint.IsAvailable)
+            {
+                _mountPoint = null;
+                EnterState(EnemyState.Patrulhando);
+                yield break;
+            }
+
+            _movement.MoveTo(_mountPoint.MountWorldPosition);
+
+            if (Vector2.Distance(transform.position, _mountPoint.MountWorldPosition) <= mountArrivalThreshold)
+            {
+                _movement.Stop();
+
+                if (_mountPoint.TryMount(this))
+                {
+                    SetCollidersEnabled(false);
+                    SetSortingLayer("MountedBot");
+                    transform.position = _mountPoint.MountWorldPosition;
+                    EnterState(EnemyState.Montado);
+                }
+                else
+                {
+                    // Outro BOT chegou no mesmo instante e ganhou o mutex
+                    _mountPoint = null;
+                    EnterState(EnemyState.Patrulhando);
+                }
+                yield break;
+            }
+
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    private IEnumerator MountedRoutine()
+    {
+        while (true)
+        {
+            // Posição travada no encaixe (torre pode se mover via animação, etc.)
+            if (_mountPoint != null)
+                transform.position = _mountPoint.MountWorldPosition;
+
+            Transform enemy = FindNearestEnemy();
+            if (enemy != null)
+            {
+                _animator?.PlayAttackAnimation(enemy.position);
+                _attack?.PerformAttack(enemy, attackDamage);
+            }
+
+            yield return new WaitForSeconds(attackCooldown);
+        }
+    }
+
+    /// <summary>
+    /// Chamado pelo BotMountPoint quando a construção é destruída.
+    /// Restaura o BOT ao estado normal de patrulha.
+    /// </summary>
+    public void Dismount()
+    {
+        SetCollidersEnabled(true);
+        SetSortingLayer("Dynamic");
+        _mountPoint?.Vacate(this);
+        _mountPoint = null;
+
+        if (_state != EnemyState.Morto)
+            EnterState(EnemyState.Patrulhando);
+    }
+
+    private void SetCollidersEnabled(bool value)
+    {
+        foreach (Collider2D col in _colliders)
+            if (col != null) col.enabled = value;
+    }
+
+    private void SetSortingLayer(string layerName)
+    {
+        int id = SortingLayer.NameToID(layerName);
+        foreach (SpriteRenderer sr in _renderers)
+            if (sr != null) sr.sortingLayerID = id;
+    }
+
+    #endregion
+
+    // ─────────────────────────────────────────
     #region Morte
 
     private void HandleDeath()
     {
+        if (_mountPoint != null)
+        {
+            SetCollidersEnabled(true);
+            SetSortingLayer("Dynamic");
+            _mountPoint.Vacate(this);
+            _mountPoint = null;
+        }
         EnterState(EnemyState.Morto);
     }
 
@@ -251,15 +401,12 @@ public class DefenderBotBrain : MonoBehaviour
     // ─────────────────────────────────────────
     #region Scanner de Inimigos
 
-    /// <summary>
-    /// Encontra o EnemyBrain mais próximo dentro do raio de detecção.
-    /// </summary>
     private Transform FindNearestEnemy()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, detectionRadius);
 
-        Transform nearest = null;
-        float nearestDist = float.MaxValue;
+        Transform nearest     = null;
+        float     nearestDist = float.MaxValue;
 
         foreach (Collider2D col in hits)
         {
@@ -267,11 +414,7 @@ public class DefenderBotBrain : MonoBehaviour
             if (enemy == null || enemy.IsDead) continue;
 
             float dist = Vector2.Distance(transform.position, col.transform.position);
-            if (dist < nearestDist)
-            {
-                nearestDist = dist;
-                nearest = col.transform;
-            }
+            if (dist < nearestDist) { nearestDist = dist; nearest = col.transform; }
         }
 
         return nearest;

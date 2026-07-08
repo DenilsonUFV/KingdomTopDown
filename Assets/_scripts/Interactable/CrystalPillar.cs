@@ -18,7 +18,10 @@ public class CrystalPillar : MonoBehaviour, IInteractable
     [SerializeField] private CrystalPillarData data;
 
     [Header("Carregamento")]
-    [SerializeField] private Vector3 carryOffset = new Vector3(0f, 0.9f, 0f);
+    [SerializeField] private Vector3 carryOffset = new Vector3(0f, 0.7f, 0f);
+
+     [Header("Offset da Construção")]
+    [SerializeField] private Vector3 build_offset = new Vector3(0f, 0.2f, 0f);
 
     #endregion
 
@@ -202,7 +205,7 @@ public class CrystalPillar : MonoBehaviour, IInteractable
 
         if (data.spawnPrefab != null){
             Debug.Log("PRE INSTANCIADO");
-            Instantiate(data.spawnPrefab, transform.position, Quaternion.identity);
+            Instantiate(data.spawnPrefab, transform.position + build_offset, Quaternion.identity);
             Debug.Log("POS INSTANCIADO");
         }
         if (_cooldownRoutine != null) StopCoroutine(_cooldownRoutine);
