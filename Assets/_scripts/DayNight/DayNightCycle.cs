@@ -138,5 +138,30 @@ public class DayNightCycle : MonoBehaviour
         _timeInPhase = _isDay ? dayDuration : nightDuration;
     }
 
+    /// <summary>
+    /// Força a fase imediatamente, resetando o timer.
+    /// Chamado pelo GameStateManager quando o estado do jogo muda.
+    /// Dispara os mesmos eventos do ciclo natural — todos os sistemas reagem igualmente.
+    /// </summary>
+    public void ForcePhase(bool toDay)
+    {
+        if (_isDay == toDay) return;
+
+        _isDay       = toDay;
+        _timeInPhase = 0f;
+
+        if (_isDay)
+        {
+            _dayCount++;
+            if (showDebugLog) Debug.Log($"[DayNight] Forçado → Dia {_dayCount}");
+            OnDayStarted?.Invoke();
+        }
+        else
+        {
+            if (showDebugLog) Debug.Log($"[DayNight] Forçado → Noite do dia {_dayCount}");
+            OnNightStarted?.Invoke();
+        }
+    }
+
     #endregion
 }

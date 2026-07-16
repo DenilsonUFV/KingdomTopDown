@@ -179,7 +179,11 @@ public class InteractionSystem : MonoBehaviour
 
         if (actionExecuted)
         {
-            if (target.RequiredTool != ToolType.None)
+            // Só adiciona um lock se não há nenhum ativo.
+            // Golpes consecutivos na mesma árvore/rocha não acumulam contadores —
+            // um trigger de animação já em andamento nunca garante que OnActionEnd
+            // dispara N vezes, então mantemos o lock count em no máximo 1.
+            if (target.RequiredTool != ToolType.None && !(_playerMovement?.IsLocked ?? false))
                 _playerMovement?.LockMovement();
             _playerAnimator?.PlayActionAnimation(target.RequiredTool, targetPosition);
         }

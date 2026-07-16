@@ -11,6 +11,8 @@ public class RockInteractable : MonoBehaviour, IInteractable
     [SerializeField] private int hitsToFall = 3;      // golpes para cair
     [SerializeField] private float hitCooldown = 0.5f;   // tempo entre golpes
     [SerializeField] private float regrowTime = 30f;    // tempo para renascer (0 = não renasce)
+    [Tooltip("Se true, ao ser cortada dropa os itens e o GameObject é destruído permanentemente.")]
+    [SerializeField] private bool destroyOnCut = false;
 
     [Header("Feedback Visual")]
     [SerializeField] private SpriteRenderer rockSR;
@@ -98,7 +100,13 @@ public class RockInteractable : MonoBehaviour, IInteractable
         // Spawna madeira e moeda
         _spawner.Spawn();
 
-        Debug.Log("[Tree] Árvore cortada!");
+        Debug.Log("[Rock] Pedra Mineirada!");
+
+        if (destroyOnCut)
+        {
+            Destroy(gameObject);
+            yield break;
+        }
 
         // Renasce após tempo (se configurado)
         if (regrowTime > 0f)

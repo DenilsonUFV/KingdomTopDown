@@ -73,16 +73,34 @@ public class PlayerHitEffect : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(slowMotionDuration);
 
-        Time.timeScale      = 1f;
-        Time.fixedDeltaTime = 0.02f;
-        _slowRoutine        = null;
+        // Só restaura se o GameStateManager não assumiu o controle do timeScale
+        // (Pausado e GameOver já definiram seus próprios valores)
+        if (JogoAtivoNormal())
+        {
+            Time.timeScale      = 1f;
+            Time.fixedDeltaTime = 0.02f;
+        }
+        _slowRoutine = null;
     }
 
     private void OnDestroy()
     {
-        // Garante que o jogo não fica em slow motion se o player for destruído
-        Time.timeScale      = 1f;
-        Time.fixedDeltaTime = 0.02f;
+        // Garante que o jogo não fica em slow motion se o player for destruído,
+        // mas respeita o timeScale do GameStateManager caso já tenha assumido o controle
+        if (JogoAtivoNormal())
+        {
+            Time.timeScale      = 1f;
+            Time.fixedDeltaTime = 0.02f;
+        }
+    }
+
+    // Retorna true quando o jogo está rodando normalmente (Dia ou Noite).
+    // Em Pausado e GameOver o GameStateManager já controla o timeScale.
+    private static bool JogoAtivoNormal()
+    {
+        if (GameStateManager.Instance == null) return true;
+        GameState s = GameStateManager.Instance.CurrentState;
+        return s == GameState.Dia || s == GameState.Noite;
     }
 
     #endregion
