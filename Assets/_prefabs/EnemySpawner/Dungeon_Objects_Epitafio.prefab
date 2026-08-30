@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnPoint
   enemyPrefab: {fileID: 8929928151452429084, guid: 471b3f488995e3245b1e30d394f11fbe, type: 3}
+  spawnPoint: {fileID: 0}
   maxSpawns: 2
   spawnsPerNight: 3
   spawnInterval: 2
@@ -144,7 +145,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

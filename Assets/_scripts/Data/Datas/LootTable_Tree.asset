@@ -15,12 +15,12 @@ MonoBehaviour:
   entries:
   - itemData: {fileID: 11400000, guid: f7657d20e7503bb4b818d6dc15a04057, type: 2}
     collectiblePrefab: {fileID: 5761243535731525573, guid: 469316711563943408e54973be50bb8a, type: 3}
-    dropChance: 0.5
+    dropChance: 0.1
     minAmount: 1
-    maxAmount: 3
+    maxAmount: 1
   - itemData: {fileID: 11400000, guid: 4c3c7f041501b374aab655a826cf992f, type: 2}
     collectiblePrefab: {fileID: 8836216209841826220, guid: 27d5b98112209d442b96537df116dc26, type: 3}
     dropChance: 1
-    minAmount: 4
-    maxAmount: 8
+    minAmount: 1
+    maxAmount: 2
   maxTotalItems: 10

@@ -17,5 +17,5 @@ MonoBehaviour:
     collectiblePrefab: {fileID: 5761243535731525573, guid: 469316711563943408e54973be50bb8a, type: 3}
     dropChance: 1
     minAmount: 5
-    maxAmount: 20
+    maxAmount: 10
   maxTotalItems: 10

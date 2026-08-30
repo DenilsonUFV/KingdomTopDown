@@ -23,6 +23,9 @@ public class EnemySpawnPoint : MonoBehaviour
     [Header("Prefab")]
     [SerializeField] private GameObject enemyPrefab;
 
+    [Header("Point")]
+    [SerializeField] private Transform spawnPoint;
+
     [Header("Cargas")]
     [Tooltip("Total de inimigos que este ponto pode gerar durante o jogo inteiro.")]
     [SerializeField] private int maxSpawns = 10;
@@ -40,6 +43,9 @@ public class EnemySpawnPoint : MonoBehaviour
     [Header("Recompensa Final")]
     [Tooltip("Itens dropados ao amanhecer quando todas as cargas se esgotam.")]
     [SerializeField] private SpawnReward[] rewards;
+
+    [Tooltip("Objeto à ser ativado quando todas as cargas se esgotam.")]
+    [SerializeField] private GameObject gameObjectToActivate;
 
     #endregion
 
@@ -91,7 +97,15 @@ public class EnemySpawnPoint : MonoBehaviour
     {
         if (!IsExhausted) return;
         DropRewards();
+        ActivateGameObject();
         Destroy(gameObject);
+    }
+
+     private void ActivateGameObject()
+    {
+        if (gameObjectToActivate == null) return;
+
+        gameObjectToActivate.SetActive(true);
     }
 
     private void DropRewards()
@@ -128,7 +142,10 @@ public class EnemySpawnPoint : MonoBehaviour
         if (IsExhausted) return;
 
         Vector2 offset = Random.insideUnitCircle * spawnRadius;
-        Vector3 pos    = transform.position + (Vector3)offset;
+        Vector3 extra = transform.position;
+        if(spawnPoint != null)
+            extra = spawnPoint.position;
+        Vector3 pos    = extra + (Vector3)offset;
 
         GameObject obj = Instantiate(enemyPrefab, pos, Quaternion.identity);
 

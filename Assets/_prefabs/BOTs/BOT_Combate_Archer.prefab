@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 5624128187915690987}
   - component: {fileID: 4452073515630816920}
   - component: {fileID: -3465892630637658892}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BOT_Combate_Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,6 +255,7 @@ MonoBehaviour:
   patrolTimeout: 6
   idleTimeMin: 1
   idleTimeMax: 2.5
+  mountArrivalThreshold: 0.5
 --- !u!114 &8771552629726992547
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -118,7 +118,8 @@ public class Star : MonoBehaviour
     {
         _player            = player;
         _previousPlayerPos = player != null ? player.position : Vector3.zero;
-        _state             = StarState.FollowingPlayer;
+        _state             = StarState.Dropped;
+        //_state             = StarState.FollowingPlayer;
     }
 
     private void ReturnToPlayer()

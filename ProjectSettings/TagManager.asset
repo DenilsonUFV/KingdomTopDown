@@ -16,8 +16,8 @@ TagManager:
   - Interactable
   - Obstacles
   - Collectible
-  - 
-  - 
+  - Enemy
+  - Bot
   - 
   - 
   - 
